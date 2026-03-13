@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <bodies>
 
-  <!-- 
-  
-  Octopod 
-  
-  -->
   <bodyparttypevariants>
-    <bodyparttypevariant VariantOf="Foot" Type="UD_CYBP FootHead"
-                         Name="foot head" Description="Foot Head"
-                         Mortal="true"
+
+    <!--
+    
+    Octopod
+    
+    -->
+    <bodyparttypevariant VariantOf="Body" Type="UD_CYBP FootBody"
+                         DescriptionPrefix="Worn over" Name="foot" Description="Foot"
                          Category="Mollusk" />
     
     <bodyparttypevariant VariantOf="Face" Type="UD_CYBP Rostrum"
@@ -33,10 +33,104 @@
                          DescriptionPrefix="Worn on" Name="suckers" Description="Suckers"
                          Plural="true" ImpliedBy="Hand"
                          Category="Mollusk" />
+
+    <!--
+    
+    Stomatopod
+    
+    -->
+    <bodyparttypevariant VariantOf="Face" Type="UD_CYBP Eye Stalks"
+                         DescriptionPrefix="Worn on" Name="eye stalks" Description="Eye Stalks"
+                         Plural="true" UsuallyOnVariant="UD_CYBP Mandibles"
+                         Category="Arthropod" />
+
+    <bodyparttypevariant VariantOf="Head" Type="UD_CYBP Mandibles"
+                         DescriptionPrefix="Worn over" Name="mandibles" Description="Mandibles"
+                         DefaultBehavior="UD_CYBP Stomatopod Mandibles"
+                         Plural="true"
+                         Category="Arthropod" />
+
+    <bodyparttypevariant VariantOf="Body" Type="UD_CYBP Thorax"
+                         DescriptionPrefix="Worn over" Name="thorax" Description="Thorax"
+                         Category="Arthropod" />
+    
+    <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Stomatopod Thoracopod"
+                         Name="thoracopod" Description="Thoracopod"
+                         DefaultBehavior="UD_CYBP Stomatopod Rake"
+                         Plural="true" UsuallyOnVariant="Cheliped"
+                         Category="Arthropod" />
+    
+    <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP Stomatopod Thoracopods"
+                         DescriptionPrefix="Worn on" Name="thoracopods" Description="Thoracopods"
+                         Plural="true" ImpliedBy="Hand"
+                         Category="Arthropod" />
+    
+    <bodyparttypevariant VariantOf="Feet" Type="UD_CYBP Stomatopod Pleopods"
+                         DescriptionPrefix="Worn on" Name="pleopods" Description="Pleopods"
+                         UsuallyOn="Back"
+                         Category="Arthropod" />
+    
+    <!-- Pistol Variant -->
+    <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Stomatopod Pistol Claw"
+                         Name="pistol claw" Description="Pistol Claw"
+                         Plural="true" UsuallyOnVariant="Cheliped"
+                         Category="Arthropod" />
+    
+    <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP Stomatopod Pistol Claws"
+                         DescriptionPrefix="Worn on" Name="pistol claws" Description="Pistol Claws"
+                         Plural="true" ImpliedBy="Hand"
+                         Category="Arthropod" />
+    
+    <bodyparttypevariant VariantOf="Missile Weapon" Type="UD_CYBP Stomatopod Missile Claw"
+                         DescriptionPrefix="Held in" Name="pistol claw" Description="Pistol Claw"
+                         DefaultBehavior="UD_CYBP Stomatopod Pistol Claw"
+                         Category="Arthropod" />
+    
+    <!-- Spear Variant -->
+    <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Stomatopod Spear Claw"
+                         Name="spear claw" Description="Spear Claw"
+                         DefaultBehavior="UD_CYBP Stomatopod Spear Claw"
+                         Plural="true" UsuallyOnVariant="Cheliped"
+                         Category="Arthropod" />
+    
+    <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP Stomatopod Spear Claws"
+                         DescriptionPrefix="Worn on" Name="spear claws" Description="Spear Claws"
+                         Plural="true" ImpliedBy="Hand"
+                         Category="Arthropod" />
+    
+    <!-- Smasher Variant -->
+    <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Stomatopod Smasher Claw"
+                         Name="spear claw" Description="Smasher Claw"
+                         DefaultBehavior="UD_CYBP Stomatopod Smasher Claw"
+                         Plural="true" UsuallyOnVariant="Cheliped"
+                         Category="Arthropod" />
+    
+    <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP Stomatopod Smasher Claws"
+                         DescriptionPrefix="Worn on" Name="smasher claws" Description="Smasher Claws"
+                         Plural="true" ImpliedBy="Hand"
+                         Category="Arthropod" />
+    
+    <!-- Hatchet Variant -->
+    <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Stomatopod Hatchet Claw"
+                         Name="hatchet claw" Description="Hatchet Claw"
+                         DefaultBehavior="UD_CYBP Stomatopod Hatchet Claw"
+                         Plural="true" UsuallyOnVariant="Cheliped"
+                         Category="Arthropod" />
+    
+    <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP Stomatopod Hatchet Claws"
+                         DescriptionPrefix="Worn on" Name="hatchet claws" Description="Hatchet Claws"
+                         Plural="true" ImpliedBy="Hand"
+                         Category="Arthropod" />
+    
   </bodyparttypevariants>
 
   <anatomies>
-    <anatomy Name="UD_CYBP Octopod" Category="Mollusk">
+    <!--
+    
+    Octopod
+    
+    -->
+    <anatomy Name="UD_CYBP Octopod" BodyType="UD_CYBP FootBody" Category="Mollusk">
       <part Type="UD_CYBP Tentacle" Laterality="Upper Right">
         <part Type="UD_CYBP Suckers" Laterality="Upper Right" SupportsDependent="Upper WornOnSuckers" />
       </part>
@@ -51,9 +145,7 @@
         <part Type="UD_CYBP Suckers" Laterality="Outer Left" SupportsDependent="Outer WornOnSuckers" />
       </part>
       
-      <part Type="UD_CYBP FootHead">
-        <part Type="UD_CYBP Rostrum" />
-      </part>
+      <part Type="UD_CYBP Rostrum" />
 
       <part Type="UD_CYBP Tentacle" Laterality="Inner Right">
         <part Type="UD_CYBP Suckers" Laterality="Inner Right" SupportsDependent="Inner WornOnSuckers" />
@@ -77,6 +169,184 @@
       <part Type="Missile Weapon" Laterality="Outer" />
       <part Type="Missile Weapon" Laterality="Inner" />
     </anatomy>
+
+    <!--
+    
+    Stomatopod
+    
+    -->
+    <!-- Pistol Variant -->
+    <anatomy Name="UD_CYBP Stomatopod Pistol" BodyType="UD_CYBP Thorax" Category="Arthropod">
+
+      <part Type="UD_CYBP Mandibles">
+        <part Type="UD_CYBP Eye Stalks" />
+      </part>
+      
+      <part Type="Cheliped" Laterality="Upper Right Fore">
+        <part Type="UD_CYBP Stomatopod Pistol Claw" Laterality="Right" SupportsDependent="Stomatopod Claws" />
+      </part>
+      <part Type="Cheliped" Laterality="Upper Left Fore">
+        <part Type="UD_CYBP Stomatopod Pistol Claw" Laterality="Left" SupportsDependent="Stomatopod Claws" />
+      </part>
+      
+      <part Type="Cheliped" Laterality="Right">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Right" SupportsDependent="Stomatopod Thoracopods" />
+      </part>
+      <part Type="Cheliped" Laterality="Left">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Left" SupportsDependent="Stomatopod Thoracopods" />
+      </part>
+      
+      <part Type="Cheliped" Laterality="Lower Right">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Lower Right" SupportsDependent="Lower Stomatopod Thoracopods" />
+      </part>
+      <part Type="Cheliped" Laterality="Lower Left">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Lower Left" SupportsDependent="Lower Stomatopod Thoracopods" />
+      </part>
+      
+      <part Type="UD_CYBP Stomatopod Pistol Claws" Laterality="Upper" DependsOn="Stomatopod Claws" />
+      <part Type="UD_CYBP Stomatopod Thoracopods" DependsOn="Stomatopod Thoracopods" />
+      <part Type="UD_CYBP Stomatopod Thoracopods" Laterality="Lower" DependsOn="Lower Stomatopod Thoracopods" />
+      
+      <part Type="Back" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore Mid" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Mid" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind Mid" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind" />
+      
+      <part Type="UD_CYBP Stomatopod Missile Claw" Laterality="Left" />
+      <part Type="UD_CYBP Stomatopod Missile Claw" Laterality="Right" />
+    </anatomy>
+    
+    <!-- Spear Variant -->
+    <anatomy Name="UD_CYBP Stomatopod Spear" BodyType="UD_CYBP Thorax" Category="Arthropod">
+
+      <part Type="UD_CYBP Mandibles">
+        <part Type="UD_CYBP Eye Stalks" />
+      </part>
+
+      <part Type="Cheliped" Laterality="Upper Right Fore">
+        <part Type="UD_CYBP Stomatopod Spear Claw" Laterality="Right" SupportsDependent="Stomatopod Claws" />
+      </part>
+      <part Type="Cheliped" Laterality="Upper Left Fore">
+        <part Type="UD_CYBP Stomatopod Spear Claw" Laterality="Left" SupportsDependent="Stomatopod Claws" />
+      </part>
+
+      <part Type="Cheliped" Laterality="Right">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Right" SupportsDependent="Stomatopod Thoracopods" />
+      </part>
+      <part Type="Cheliped" Laterality="Left">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Left" SupportsDependent="Stomatopod Thoracopods" />
+      </part>
+
+      <part Type="Cheliped" Laterality="Lower Right">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Lower Right" SupportsDependent="Lower Stomatopod Thoracopods" />
+      </part>
+      <part Type="Cheliped" Laterality="Lower Left">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Lower Left" SupportsDependent="Lower Stomatopod Thoracopods" />
+      </part>
+
+      <part Type="UD_CYBP Stomatopod Spear Claws" Laterality="Upper" DependsOn="Stomatopod Claws" />
+      <part Type="UD_CYBP Stomatopod Thoracopods" DependsOn="Stomatopod Thoracopods" />
+      <part Type="UD_CYBP Stomatopod Thoracopods" Laterality="Lower" DependsOn="Lower Stomatopod Thoracopods" />
+
+      <part Type="Back" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore Mid" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Mid" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind Mid" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind" />
+
+      <part Type="Missile Weapon" Laterality="Left" />
+      <part Type="Missile Weapon" Laterality="Right" />
+    </anatomy>
+    
+    <!-- Hatchet Variant -->
+    <anatomy Name="UD_CYBP Stomatopod Hatchet" BodyType="UD_CYBP Thorax" Category="Arthropod">
+
+      <part Type="UD_CYBP Mandibles">
+        <part Type="UD_CYBP Eye Stalks" />
+      </part>
+
+      <part Type="Cheliped" Laterality="Upper Right Fore">
+        <part Type="UD_CYBP Stomatopod Hatchet Claw" Laterality="Right" SupportsDependent="Stomatopod Claws" />
+      </part>
+      <part Type="Cheliped" Laterality="Upper Left Fore">
+        <part Type="UD_CYBP Stomatopod Hatchet Claw" Laterality="Left" SupportsDependent="Stomatopod Claws" />
+      </part>
+
+      <part Type="Cheliped" Laterality="Right">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Right" SupportsDependent="Stomatopod Thoracopods" />
+      </part>
+      <part Type="Cheliped" Laterality="Left">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Left" SupportsDependent="Stomatopod Thoracopods" />
+      </part>
+
+      <part Type="Cheliped" Laterality="Lower Right">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Lower Right" SupportsDependent="Lower Stomatopod Thoracopods" />
+      </part>
+      <part Type="Cheliped" Laterality="Lower Left">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Lower Left" SupportsDependent="Lower Stomatopod Thoracopods" />
+      </part>
+
+      <part Type="UD_CYBP Stomatopod Hatchet Claws" Laterality="Upper" DependsOn="Stomatopod Claws" />
+      <part Type="UD_CYBP Stomatopod Thoracopods" DependsOn="Stomatopod Thoracopods" />
+      <part Type="UD_CYBP Stomatopod Thoracopods" Laterality="Lower" DependsOn="Lower Stomatopod Thoracopods" />
+
+      <part Type="Back" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore Mid" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Mid" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind Mid" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind" />
+
+      <part Type="Missile Weapon" Laterality="Left" />
+      <part Type="Missile Weapon" Laterality="Right" />
+    </anatomy>
+    
+    <!-- Smasher Variant -->
+    <anatomy Name="UD_CYBP Stomatopod Smasher" BodyType="UD_CYBP Thorax" Category="Arthropod">
+
+      <part Type="UD_CYBP Mandibles">
+        <part Type="UD_CYBP Eye Stalks" />
+      </part>
+
+      <part Type="Cheliped" Laterality="Upper Right Fore">
+        <part Type="UD_CYBP Stomatopod Smasher Claw" Laterality="Right" SupportsDependent="Stomatopod Claws" />
+      </part>
+      <part Type="Cheliped" Laterality="Upper Left Fore">
+        <part Type="UD_CYBP Stomatopod Smasher Claw" Laterality="Left" SupportsDependent="Stomatopod Claws" />
+      </part>
+
+      <part Type="Cheliped" Laterality="Right">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Right" SupportsDependent="Stomatopod Thoracopods" />
+      </part>
+      <part Type="Cheliped" Laterality="Left">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Left" SupportsDependent="Stomatopod Thoracopods" />
+      </part>
+
+      <part Type="Cheliped" Laterality="Lower Right">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Lower Right" SupportsDependent="Lower Stomatopod Thoracopods" />
+      </part>
+      <part Type="Cheliped" Laterality="Lower Left">
+        <part Type="UD_CYBP Stomatopod Thoracopod" Laterality="Lower Left" SupportsDependent="Lower Stomatopod Thoracopods" />
+      </part>
+
+      <part Type="UD_CYBP Stomatopod Smasher Claws" Laterality="Upper" DependsOn="Stomatopod Claws" />
+      <part Type="UD_CYBP Stomatopod Thoracopods" DependsOn="Stomatopod Thoracopods" />
+      <part Type="UD_CYBP Stomatopod Thoracopods" Laterality="Lower" DependsOn="Lower Stomatopod Thoracopods" />
+
+      <part Type="Back" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore Mid" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Mid" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind Mid" />
+      <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind" />
+
+      <part Type="Missile Weapon" Laterality="Left" />
+      <part Type="Missile Weapon" Laterality="Right" />
+    </anatomy>
+    
   </anatomies>
-  
+
 </bodies>

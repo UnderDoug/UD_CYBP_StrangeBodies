@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+
+  <object Name="StrangeBodies_UD_CYBP_AnatomyTile UD_CYBP Octopod" Inherits="UD_CYBP_BaseAnatomyTile">
+    <tag Name="Anatomy" Value="UD_CYBP Octopod" />
+    <part Name="Render" Tile="Creatures/natural-weapon-suckers.png"
+        RenderString="S" TileColor="&amp;w" DetailColor="W" />
+  </object>
+
+  <object Name="StrangeBodies_UD_CYBP_AnatomyTile UD_CYBP Stomatopod Pistol" Inherits="UD_CYBP_BaseAnatomyTile">
+    <tag Name="Anatomy" Value="UD_CYBP Stomatopod Pistol" />
+    <part Name="Render" Tile="Creatures/natural-weapon-pincer.bmp"
+        RenderString="L" TileColor="&amp;w" DetailColor="W" />
+  </object>
+
+  <object Name="StrangeBodies_UD_CYBP_AnatomyTile UD_CYBP Stomatopod Spear" Inherits="UD_CYBP_BaseAnatomyTile">
+    <tag Name="Anatomy" Value="UD_CYBP Stomatopod Spear" />
+    <part Name="Render" Tile="Creatures/natural-weapon-mandible.bmp"
+        RenderString="L" TileColor="&amp;w" DetailColor="W" />
+  </object>
+
+  <object Name="StrangeBodies_UD_CYBP_AnatomyTile UD_CYBP Stomatopod Smasher" Inherits="UD_CYBP_BaseAnatomyTile">
+    <tag Name="Anatomy" Value="UD_CYBP Stomatopod Smasher" />
+    <part Name="Render" Tile="Creatures/natural-weapon-knob.bmp"
+        RenderString="L" TileColor="&amp;w" DetailColor="W" />
+  </object>
+
+  <object Name="StrangeBodies_UD_CYBP_AnatomyTile UD_CYBP Stomatopod Hatchet" Inherits="UD_CYBP_BaseAnatomyTile">
+    <tag Name="Anatomy" Value="UD_CYBP Stomatopod Hatchet" />
+    <part Name="Render" Tile="Creatures/natural-weapon-shovel.bmp"
+        RenderString="L" TileColor="&amp;w" DetailColor="W" />
+  </object>
+  
+</objects>
