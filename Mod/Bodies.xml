@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<bodies>
+
+  <!-- 
+  
+  Octopod 
+  
+  -->
+  <bodyparttypevariants>
+    <bodyparttypevariant VariantOf="Foot" Type="UD_CYBP FootHead"
+                         Name="foot head" Description="Foot Head"
+                         Mortal="true"
+                         Category="Mollusk" />
+    
+    <bodyparttypevariant VariantOf="Face" Type="UD_CYBP Rostrum"
+                         Name="rostrum" Description="Rostrum"
+                         DefaultBehavior="Beak Rostrum"
+                         UsuallyOnVariant="UD_CYBP FootHead"
+                         Category="Mollusk" />
+    
+    <bodyparttypevariant VariantOf="Arm" Type="UD_CYBP Tentacle"
+                         Name="tentacle" Description="Tentacle"
+                         Mobility="1"
+                         Category="Mollusk" />
+    
+    <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Suckers"
+                         Name="suckers" Description="Suckers"
+                         DefaultBehavior="UD_CYBP Suckers"
+                         Plural="true" UsuallyOnVariant="UD_CYBP Tentacle"
+                         Category="Mollusk" />
+    
+    <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP WornOnSuckers"
+                         DescriptionPrefix="Worn on" Name="suckers" Description="Suckers"
+                         Plural="true" ImpliedBy="Hand"
+                         Category="Mollusk" />
+  </bodyparttypevariants>
+
+  <anatomies>
+    <anatomy Name="UD_CYBP Octopod" Category="Mollusk">
+      <part Type="UD_CYBP Tentacle" Laterality="Upper Right">
+        <part Type="UD_CYBP Suckers" Laterality="Upper Right" SupportsDependent="Upper WornOnSuckers" />
+      </part>
+      <part Type="UD_CYBP Tentacle" Laterality="Upper Left">
+        <part Type="UD_CYBP Suckers" Laterality="Upper Left" SupportsDependent="Upper WornOnSuckers" />
+      </part>
+
+      <part Type="UD_CYBP Tentacle" Laterality="Outer Right">
+        <part Type="UD_CYBP Suckers" Laterality="Outer Right" SupportsDependent="Outer WornOnSuckers" />
+      </part>
+      <part Type="UD_CYBP Tentacle" Laterality="Outer Left">
+        <part Type="UD_CYBP Suckers" Laterality="Outer Left" SupportsDependent="Outer WornOnSuckers" />
+      </part>
+      
+      <part Type="UD_CYBP FootHead">
+        <part Type="UD_CYBP Rostrum" />
+      </part>
+
+      <part Type="UD_CYBP Tentacle" Laterality="Inner Right">
+        <part Type="UD_CYBP Suckers" Laterality="Inner Right" SupportsDependent="Inner WornOnSuckers" />
+      </part>
+      <part Type="UD_CYBP Tentacle" Laterality="Inner Left">
+        <part Type="UD_CYBP Suckers" Laterality="Inner Left" SupportsDependent="Inner WornOnSuckers" />
+      </part>
+
+      <part Type="UD_CYBP Tentacle" Laterality="Lower Right">
+        <part Type="UD_CYBP Suckers" Laterality="Lower Right" SupportsDependent="Lower WornOnSuckers" />
+      </part>
+      <part Type="UD_CYBP Tentacle" Laterality="Lower Left">
+        <part Type="UD_CYBP Suckers" Laterality="Lower Left" SupportsDependent="Lower WornOnSuckers" />
+      </part>
+
+      <part Type="UD_CYBP WornOnSuckers" Laterality="Upper" DependsOn="Upper WornOnSuckers" />
+      <part Type="UD_CYBP WornOnSuckers" Laterality="Outer" DependsOn="Outer WornOnSuckers" />
+      <part Type="UD_CYBP WornOnSuckers" Laterality="Inner" DependsOn="Inner WornOnSuckers" />
+      <part Type="UD_CYBP WornOnSuckers" Laterality="Lower" DependsOn="Lower WornOnSuckers" />
+      
+      <part Type="Missile Weapon" Laterality="Outer" />
+      <part Type="Missile Weapon" Laterality="Inner" />
+    </anatomy>
+  </anatomies>
+  
+</bodies>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+
+  <object Name="UD_CYBP_AnatomyTiles" Load="Merge" >
+    <xtagUD_CYBP_UD_CYBP_Octopod Blueprint="Suckers" Tile="Creatures/natural-weapon-suckers.png" RenderString="233" TileColor="&amp;w" DetailColor="W" />
+  </object>
+  
+  <object Name="StrangeBodies_UD_CYBP_Configuration Octopod" Inherits="UD_CYBP_BaseConfiguration">
+    <tag Name="Anatomy" Value="UD_CYBP Octopod" />
+    <tag Name="DisplayName" Value="Octopod" />
+  </object>
+  
+</objects>

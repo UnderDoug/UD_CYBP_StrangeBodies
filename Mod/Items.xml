@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+
+  <object Name="UD_CYBP Suckers" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="suckers" Tile="Creatures/natural-weapon-suckers.png" ColorString="&amp;w" TileColor="&amp;w" DetailColor="W" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="999" BaseDamage="1d2" Skill="Cudgel" Stat="Strength" />
+    <tag Name="BaseObject" Value="*noinherit" />
+    <tag Name="SwingSound" Value="sfx_melee_naturalWeapon_fist_swing" />
+    <tag Name="BlockedSound" Value="sfx_melee_naturalWeapon_fist_blocked" />
+  </object>
+  
+</objects>

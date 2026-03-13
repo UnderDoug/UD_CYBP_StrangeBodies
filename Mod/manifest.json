@@ -1,0 +1,13 @@
+{
+    "id": "UD_CYBP_StrangeBodies",
+    "title": "CYBP Strange Bodies",
+    "description": "Adds a selection of strange body plans for players to choose from.",
+    "version": "0.0.1",
+    "author": "{{K-g-G-Y-G-g-K alternation|UnderDoug}}",
+    "tags": "Character Generation,Extension,Customization",
+    "PreviewImage": "preview.png",
+    "LoadAfter": "UD_ChooseYourBodyPlan",
+    "Dependencies": {
+        "UD_ChooseYourBodyPlan": ">=0.0.1"
+    }
+}
