@@ -46,22 +46,65 @@
     <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_longBlade_saltHopperMandible_blocked" />
   </object>
   <!-- Pistol Variant -->
-  <object Name="UD_CYBP Stomatopod Pistol Claw Pistol" Inherits="NaturalMissileWeapon">
+  <!--object Name="UD_CYBP Stomatopod Pistol Claw Pistol" Inherits="NaturalMissileWeapon">
     <part Name="Render" DisplayName="pistol claw"
           RenderString="L" ColorString="&amp;w"
           Tile="Items/sw_fleshgun.bmp"
           TileColor="&amp;w" DetailColor="B" />
+    <part Name="Description" Short="Evolutionary pressure has molded the dactyl joints, adhesive plaques, and a tooth-cavity system into a pistol-like claw that supports snapping with such force that it tears a tiny cavity in the air in front of it. This cavity violently implodes, producing sonoluminescence, with the aid of the weight of the atmosphere." />
     <part Name="MissileWeapon"
           WeaponAccuracy="12" RangeIncrement="6"
-          AmmoChar="&amp;B*" />
+          AmmoChar="&amp;B*"
+          Skill="Pistol"
+          SlotType="UD_CYBP Stomatopod Pistol Claw" />
     <part Name="BioAmmoLoader"
           MaxCapacity="1" Available="1" TurnsToGenerate="3"
           IsRealityDistortionBased="false"
           IsEMPSensitive="false"
           ProjectileObject="Projectile_UD_CYBP Stomatopod Pistol Claws_Energy" />
-    <tag Name="UsesSlots" Value="UD_CYBP Stomatopod Missile Claw,UD_CYBP Stomatopod Pistol Claw" />
-    <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_saltHopperMandible_swing" />
-    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_longBlade_saltHopperMandible_blocked" />
+    <tag Name="MissileFireSound" Value="sfx_slugsnout_missile_fire" />
+    <part Name="MeleeWeapon"
+          MaxStrengthBonus="999"
+          BaseDamage="1d4"
+          Skill="Cudgel" Stat="Strength"
+          Slot="Missile Weapon" />
+    <tag Name="UsesSlots" Value="Hand" />
+  </object-->
+  <object Name="UD_CYBP Stomatopod Pistol Claw Pistol" Inherits="MissileWeapon">
+    <part Name="Render" DisplayName="pistol claw"
+          RenderString="L" ColorString="&amp;w"
+          Tile="Items/sw_fleshgun.bmp"
+          TileColor="&amp;w" DetailColor="B" />
+    <part Name="Description" Short="Evolutionary pressure has molded the dactyl joints, adhesive plaques, and a tooth-cavity system into a pistol-like claw that supports snapping with such force that it tears a tiny cavity in the air in front of it. This cavity violently implodes, producing sonoluminescence, with the aid of the weight of the atmosphere." />
+    <part Name="Physics" Weight="1" Organic="true" />
+    <part Name="MissileWeapon"
+          WeaponAccuracy="12" RangeIncrement="6"
+          AmmoChar="&amp;B*"
+          Skill="Pistol"
+          SlotType="Missile Weapon" />
+    <part Name="BioAmmoLoader"
+          MaxCapacity="1" Available="1" TurnsToGenerate="5"
+          IsRealityDistortionBased="false"
+          IsEMPSensitive="false"
+          ProjectileObject="Projectile_UD_CYBP Stomatopod Pistol Claws_Energy" />
+    <tag Name="UsesSlots" Value="Missile Weapon" />
+    <removepart Name="TinkerItem" />
+    <intproperty Name="Natural" Value="1" />
+    <part Name="NaturalEquipment" />
+    <part Name="Cursed" RevealInDescription="false" />
+    <part Name="NoBreak" />
+    <part Name="NoDamage" />
+    <part Name="NoRust" />
+    <intproperty Name="Bleeds" Value="1" />
+    <tag Name="BleedLiquid" Value="blood-1000" />
+    <tag Name="LiveAnimal" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <tag Name="NaturalGear" />
+    <tag Name="NoDefaultBehavior" />
+    <tag Name="NoSparkingQuest" />
+    <tag Name="ShowAsPhysicalFeature" />
+    <stag Name="Contemporary" />
+    <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Pistols/sfx_missile_psychalFleshgun_fire" />
   </object>
   <object Name="Projectile_UD_CYBP Stomatopod Pistol Claws_Energy" Inherits="TemporaryEnergyProjectile">
     <part Name="Render" DisplayName="sonic blast"
@@ -74,15 +117,57 @@
           RenderString="L" ColorString="&amp;w"
           Tile="Creatures/natural-weapon-pincer.bmp"
           TileColor="&amp;w" DetailColor="B" />
+    <part Name="Description" Short="Evolutionary pressure has molded the dactyl joints, adhesive plaques, and a tooth-cavity system into a pistol-like claw that supports snapping with such force that it tears a tiny cavity in the air in front of it. This cavity violently implodes, producing sonoluminescence, with the aid of the weight of the atmosphere." />
+    <part Name="MeleeWeapon"
+          MaxStrengthBonus="12"
+          BaseDamage="1d6"
+          Skill="Cudgel" Stat="Strength"
+          Slot="Missile Weapon" />
+    <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_saltHopperMandible_swing" />
+    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_longBlade_saltHopperMandible_blocked" />
+    </object>
+  <!--object Name="UD_CYBP Stomatopod Pistol Claw Pistol" Inherits="NaturalMissileWeapon">
+    <part Name="Render" DisplayName="pistol claw"
+          RenderString="L" ColorString="&amp;w"
+          Tile="Items/sw_fleshgun.bmp"
+          TileColor="&amp;w" DetailColor="B" />
+    <part Name="Description" Short="Evolutionary pressure has molded the dactyl joints, adhesive plaques, and a tooth-cavity system into a pistol-like claw that supports snapping with such force that it tears a tiny cavity in the air in front of it. This cavity violently implodes, producing sonoluminescence, with the aid of the weight of the atmosphere." />
     <part Name="MeleeWeapon"
           MaxStrengthBonus="999"
           BaseDamage="1d4"
           Skill="Cudgel" Stat="Strength"
           Slot="Hand" />
-    <tag Name="UsesSlots" Value="UD_CYBP Stomatopod Pistol Claw" />
+    <part Name="MissileWeapon"
+          WeaponAccuracy="12" RangeIncrement="6"
+          AmmoChar="&amp;B*"
+          Skill="Pistol" />
+    <part Name="BioAmmoLoader"
+          MaxCapacity="1" Available="1" TurnsToGenerate="3"
+          IsRealityDistortionBased="false"
+          IsEMPSensitive="false"
+          ProjectileObject="Projectile_UD_CYBP Stomatopod Pistol Claws_Energy" />
+    <tag Name="UsesSlots" Value="UD_CYBP Stomatopod Pistol Claw,Missile Weapon,UD_CYBP Stomatopod Missile Claw" />
+  </object>
+  <object Name="Projectile_UD_CYBP Stomatopod Pistol Claws_Energy" Inherits="TemporaryEnergyProjectile">
+    <part Name="Render" DisplayName="sonic blast"
+          RenderString="*" ColorString="&amp;B"
+          TileColor="&amp;B" DetailColor="c" />
+    <part Name="Projectile" BasePenetration="8" BaseDamage="1d6" ColorString="&amp;B" PassByVerb="pop" />
+  </object>
+  <object Name="UD_CYBP Stomatopod Pistol Claw Claw" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="pistol claw"
+          RenderString="L" ColorString="&amp;w"
+          Tile="Creatures/natural-weapon-pincer.bmp"
+          TileColor="&amp;w" DetailColor="B" />
+    <part Name="Description" Short="Evolutionary pressure has molded the dactyl joints, adhesive plaques, and a tooth-cavity system into a pistol-like claw that supports snapping with such force that it tears a tiny cavity in the air in front of it. This cavity violently implodes, producing sonoluminescence, with the aid of the weight of the atmosphere." />
+    <part Name="MeleeWeapon"
+          MaxStrengthBonus="999"
+          BaseDamage="1d4"
+          Skill="Cudgel" Stat="Strength"
+          Slot="Hand" />
     <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_saltHopperMandible_swing" />
     <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_longBlade_saltHopperMandible_blocked" />
-  </object>
+  </object-->
   <!-- Spear Variant-->
   <object Name="UD_CYBP Stomatopod Spear Claw" Inherits="NaturalWeapon">
     <part Name="Render" DisplayName="spear claw"

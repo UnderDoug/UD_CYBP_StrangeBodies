@@ -71,7 +71,7 @@
                          Category="Arthropod" />
     
     <!-- Pistol Variant -->
-    <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Stomatopod Pistol Claw"
+    <bodyparttypevariant VariantOf="Missile Weapon" Type="UD_CYBP Stomatopod Pistol Claw"
                          Name="pistol claw" Description="Pistol Claw"
                          DefaultBehavior="UD_CYBP Stomatopod Pistol Claw Claw"
                          Plural="true" UsuallyOnVariant="Cheliped"
@@ -79,12 +79,11 @@
     
     <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP Stomatopod Pistol Claws"
                          DescriptionPrefix="Worn on" Name="pistol claws" Description="Pistol Claws"
-                         Plural="true" ImpliedBy="Hand"
+                         Plural="true" ImpliedBy="UD_CYBP Stomatopod Pistol Claw"
                          Category="Arthropod" />
     
     <bodyparttypevariant VariantOf="Missile Weapon" Type="UD_CYBP Stomatopod Missile Claw"
                          Name="missile weapon" Description="Missile Weapon"
-                         DefaultBehavior="UD_CYBP Stomatopod Pistol Claw Pistol"
                          Category="Arthropod" />
     
     <!-- Spear Variant -->
@@ -161,14 +160,14 @@
       <part Type="UD_CYBP Tentacle" Laterality="Lower Left">
         <part Type="UD_CYBP Suckers" Laterality="Lower Left" SupportsDependent="Lower WornOnSuckers" />
       </part>
+      
+      <part Type="Missile Weapon" Laterality="Outer" />
+      <part Type="Missile Weapon" Laterality="Inner" />
 
       <part Type="UD_CYBP WornOnSuckers" Laterality="Upper" DependsOn="Upper WornOnSuckers" />
       <part Type="UD_CYBP WornOnSuckers" Laterality="Outer" DependsOn="Outer WornOnSuckers" />
       <part Type="UD_CYBP WornOnSuckers" Laterality="Inner" DependsOn="Inner WornOnSuckers" />
       <part Type="UD_CYBP WornOnSuckers" Laterality="Lower" DependsOn="Lower WornOnSuckers" />
-      
-      <part Type="Missile Weapon" Laterality="Outer" />
-      <part Type="Missile Weapon" Laterality="Inner" />
     </anatomy>
 
     <!--
@@ -209,14 +208,14 @@
       <part Type="UD_CYBP Stomatopod Thoracopods" Laterality="Lower" DependsOn="Lower Stomatopod Thoracopods" />
       
       <part Type="Back" />
+      <part Type="UD_CYBP Stomatopod Missile Claw" Laterality="Right" />
+      <part Type="UD_CYBP Stomatopod Missile Claw" Laterality="Left" />
+      
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind" />
-      
-      <part Type="UD_CYBP Stomatopod Missile Claw" Laterality="Left" />
-      <part Type="UD_CYBP Stomatopod Missile Claw" Laterality="Right" />
     </anatomy>
     
     <!-- Spear Variant -->
@@ -252,14 +251,14 @@
       <part Type="UD_CYBP Stomatopod Thoracopods" Laterality="Lower" DependsOn="Lower Stomatopod Thoracopods" />
 
       <part Type="Back" />
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+      
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind" />
-
-      <part Type="Missile Weapon" Laterality="Left" />
-      <part Type="Missile Weapon" Laterality="Right" />
     </anatomy>
     
     <!-- Hatchet Variant -->
@@ -295,14 +294,14 @@
       <part Type="UD_CYBP Stomatopod Thoracopods" Laterality="Lower" DependsOn="Lower Stomatopod Thoracopods" />
 
       <part Type="Back" />
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+      
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind" />
-
-      <part Type="Missile Weapon" Laterality="Left" />
-      <part Type="Missile Weapon" Laterality="Right" />
     </anatomy>
     
     <!-- Smasher Variant -->
@@ -338,14 +337,14 @@
       <part Type="UD_CYBP Stomatopod Thoracopods" Laterality="Lower" DependsOn="Lower Stomatopod Thoracopods" />
 
       <part Type="Back" />
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+      
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Fore Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind" />
-
-      <part Type="Missile Weapon" Laterality="Left" />
-      <part Type="Missile Weapon" Laterality="Right" />
     </anatomy>
     
     <!--
@@ -358,11 +357,56 @@
     Probiscimorph (elephant)
     
     -->
+    <anatomy Name="UD_CYBP Probiscimorph" Category="Animal">
+      <part Type="Head">
+        <part Type="Face">
+          <part Type="Arm">
+            <part Type="Hand"/>
+          </part>
+        </part>
+      </part>
+      <part Type="Back" />
+      <part Type="Arm" Laterality="Right">
+        <part Type="Hand" Laterality="Right" SupportsDependent="Hands" />
+      </part>
+      <part Type="Arm" Laterality="Left">
+        <part Type="Hand" Laterality="Left" SupportsDependent="Hands" />
+      </part>
+      <part Type="Hands" DependsOn="Hands" />
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+      <part Type="Feet" />
+    </anatomy>
     <!--
     
     Anthropoids (monkeys)
     
     -->
+    <anatomy Name="UD_CYBP Anthropoid" Category="Animal">
+      <part Type="Head">
+        <part Type="Face"/>
+      </part>
+      <part Type="Back" />
+      <part Type="Arm" Laterality="Right">
+        <part Type="Hand" Laterality="Right" SupportsDependent="Hands" />
+      </part>
+      <part Type="Arm" Laterality="Left">
+        <part Type="Hand" Laterality="Left" SupportsDependent="Hands" />
+      </part>
+      <part Type="Hands" DependsOn="Hands" />
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+      <part Type="Leg" Laterality="Right">
+        <part Type="Hand" Laterality="Right" SupportsDependent="Feet" />
+      </part>
+      <part Type="Leg" Laterality="Left">
+        <part Type="Hand" Laterality="Left" SupportsDependent="Feet" />
+      </part>
+      <part Type="Hands" DependsOn="Feet" />
+      <part Type="Tail">
+        <part Type="Hand"/>
+      </part>
+    </anatomy>
   </anatomies>
 
 </bodies>
