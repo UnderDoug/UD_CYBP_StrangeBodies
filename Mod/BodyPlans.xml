@@ -13,6 +13,7 @@
     <tag Name="DisplayName" Value="Stomatopod (Pistol)" />
     <part Name="Render" Tile="Creatures/natural-weapon-pincer.bmp"
         RenderString="L" TileColor="&amp;w" DetailColor="W" />
+    <inventoryobject Blueprint="UD_CYBP Stomatopod Pistol Claw Pistol" Number="2" />
   </object>
   
   <object Name="StrangeBodies_UD_CYBP_Configuration Stomatopod Spear" Inherits="UD_CYBP_BaseBodyPlanEntry">
