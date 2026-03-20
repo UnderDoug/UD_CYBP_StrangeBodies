@@ -78,7 +78,8 @@
     <!-- Pistol Variant -->
     <bodyparttypevariant VariantOf="Missile Weapon" Type="UD_CYBP Stomatopod Pistol Claw"
                          Name="pistol claw" Description="Pistol Claw"
-                         Plural="true" UsuallyOnVariant="Cheliped"
+                         UsuallyOnVariant="Cheliped"
+                         RequiresType="Cheliped" Abstract="false"
                          Category="Arthropod" />
     
     <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP Stomatopod Pistol Claws"

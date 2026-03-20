@@ -14,7 +14,8 @@
     <tag Name="TextElements.StrangeBodies PistolClaws" />
     <part Name="Render" Tile="Creatures/natural-weapon-pincer.bmp"
         RenderString="L" TileColor="&amp;w" DetailColor="W" />
-    <inventoryobject Blueprint="UD_CYBP Stomatopod Pistol Claw Pistol" Number="2" />
+    <inventoryobject Blueprint="UD_CYBP Stomatopod Pistol Claw Pistol" Number="1" />
+    <inventoryobject Blueprint="UD_CYBP Stomatopod Pistol Claw Pistol" Number="1" />
     <tag Name="LimbElements.UD_CYBP Stomatopod Pistol Claw" Value="Color::B;;PostText::{{c|&#x1A;}}6 {{r|&#x3;}}1d6" />
   </object>
 
