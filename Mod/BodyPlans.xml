@@ -11,15 +11,22 @@
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Stomatopod Pistol" Inherits="UD_CYBP_BaseBodyPlanEntry">
     <tag Name="Anatomy" Value="UD_CYBP Stomatopod Pistol" />
     <tag Name="DisplayName" Value="Stomatopod (Pistol)" />
+    <tag Name="TextElements.StrangeBodies PistolClaws" />
     <part Name="Render" Tile="Creatures/natural-weapon-pincer.bmp"
         RenderString="L" TileColor="&amp;w" DetailColor="W" />
     <inventoryobject Blueprint="UD_CYBP Stomatopod Pistol Claw Pistol" Number="2" />
+    <tag Name="LimbElements.UD_CYBP Stomatopod Pistol Claw" Value="Color::B;;PostText::{{c|&#x1A;}}6 {{r|&#x3;}}1d6" />
+  </object>
+
+  <object Name="StrangeBodies_UD_CYBP_TextElements PistolClaws" Inherits="UD_CYBP_BaseTextElements">
+    <tag Name="TextElements" Value="StrangeBodies PistolClaws" />
+    <xtagUD_CYBP_Legend PistolClaw="{{B|Pistol Claw}} is a natural pistol." />
   </object>
   
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Stomatopod Spear" Inherits="UD_CYBP_BaseBodyPlanEntry">
     <tag Name="Anatomy" Value="UD_CYBP Stomatopod Spear" />
     <tag Name="DisplayName" Value="Stomatopod (Spear)" />
-    <part Name="Render" Tile="Creatures/natural-weapon-mandible.bmp"
+    <part Name="Render" Tile="Items/sw_longblade_13.bmp"
         RenderString="L" TileColor="&amp;w" DetailColor="W" />
   </object>
   
@@ -44,10 +51,38 @@
         RenderString="S" TileColor="&amp;w" DetailColor="W" />
   </object>
   
+  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Tailed Probiscimorph" Inherits="UD_CYBP_BaseBodyPlanEntry">
+    <tag Name="Anatomy" Value="UD_CYBP Tailed Probiscimorph" />
+    <tag Name="DisplayName" Value="Probiscimorph (Tailed)" />
+    <part Name="Render" Tile="Creatures/natural-weapon-pseudopod.bmp"
+        RenderString="S" TileColor="&amp;w" DetailColor="W" />
+  </object>
+  
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Anthropoid" Inherits="UD_CYBP_BaseBodyPlanEntry">
     <tag Name="Anatomy" Value="UD_CYBP Anthropoid" />
     <tag Name="DisplayName" Value="Anthropoid" />
     <part Name="Render" Tile="creatures/sw_cyclops.bmp"
+        RenderString="G" TileColor="&amp;w" DetailColor="W" />
+  </object>
+  
+  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Tailed Anthropoid" Inherits="UD_CYBP_BaseBodyPlanEntry">
+    <tag Name="Anatomy" Value="UD_CYBP Tailed Anthropoid" />
+    <tag Name="DisplayName" Value="Anthropoid (Tailed)" />
+    <part Name="Render" Tile="creatures/sw_cyclops.bmp"
+        RenderString="G" TileColor="&amp;w" DetailColor="W" />
+  </object>
+  
+  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry UD_CYBP Girafform" Inherits="UD_CYBP_BaseBodyPlanEntry">
+    <tag Name="Anatomy" Value="UD_CYBP Girafform" />
+    <tag Name="DisplayName" Value="Girafform" />
+    <part Name="Render" Tile="creatures/sw_equimax.bmp"
+        RenderString="G" TileColor="&amp;w" DetailColor="W" />
+  </object>
+  
+  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Tailed UD_CYBP Girafform" Inherits="UD_CYBP_BaseBodyPlanEntry">
+    <tag Name="Anatomy" Value="UD_CYBP Tailed Girafform" />
+    <tag Name="DisplayName" Value="Girafform (Tailed)" />
+    <part Name="Render" Tile="creatures/sw_equimax.bmp"
         RenderString="G" TileColor="&amp;w" DetailColor="W" />
   </object>
   

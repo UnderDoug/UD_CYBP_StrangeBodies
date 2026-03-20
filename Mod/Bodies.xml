@@ -70,10 +70,14 @@
                          UsuallyOn="Back"
                          Category="Arthropod" />
     
+    <bodyparttypevariant VariantOf="Tail" Type="UD_CYBP Fanned Tail"
+                         Name="fanned tail" Description="Fanned Tail"
+                         UsuallyOn="Back"
+                         Category="Arthropod" />
+    
     <!-- Pistol Variant -->
     <bodyparttypevariant VariantOf="Missile Weapon" Type="UD_CYBP Stomatopod Pistol Claw"
                          Name="pistol claw" Description="Pistol Claw"
-                         DefaultBehavior="UD_CYBP Stomatopod Pistol Claw Claw"
                          Plural="true" UsuallyOnVariant="Cheliped"
                          Category="Arthropod" />
     
@@ -121,8 +125,61 @@
                          DescriptionPrefix="Worn on" Name="hatchet claws" Description="Hatchet Claws"
                          Plural="true" ImpliedBy="Hand"
                          Category="Arthropod" />
+
+    <!--
+    
+    Probiscimorph (elephant)
+    
+    -->
+    <bodyparttypevariant VariantOf="Arm" Type="UD_CYBP Trunk"
+                         Name="trunk" Description="Trunk"
+                         Category="Animal" />
+
+    <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Prehensile Nostrils"
+                         DescriptionPrefix="Held with" Name="nostrils" Description="Nostrils"
+                         DefaultBehavior="UD_CYBP Prehensile Nostrils"
+                         Plural="true" UsuallyOnVariant="UD_CYBP Trunk"
+                         Category="Animal" />
+    
+    <!--
+    
+      Anthropoids (monkeys)
+    
+    -->
+    <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Prehensile Foot"
+                         DescriptionPrefix="Held with" Name="foot" Description="Foot"
+                         DefaultBehavior="UD_CYBP Prehensile Foot"
+                         UsuallyOnVariant="Leg"
+                         Category="Animal" />
+
+    <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP Prehensile Feet"
+                         DescriptionPrefix="Worn on" Name="prehensile feet" Description="Prehensile Feet"
+                         Plural="true" ImpliedBy="Hand"
+                         Category="Animal" />
+
+    <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Prehensile Tail"
+                         DescriptionPrefix="Held with" Name="tail" Description="Tail"
+                         DefaultBehavior="UD_CYBP Prehensile Tail"
+                         UsuallyOnVariant="Leg"
+                         Category="Animal" />
+  
+    <!--
+    
+      Girafform (Giraffe)
+    
+    -->
+    <bodyparttypevariant VariantOf="Arm" Type="UD_CYBP Neck"
+                         DescriptionPrefix="Worn around" Name="neck" Description="Neck"
+                         Category="Animal" />
+
+    <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Prehensile Tongue"
+                         DescriptionPrefix="Held with" Name="tongue" Description="Tongue"
+                         DefaultBehavior="UD_CYBP Prehensile Tongue"
+                         UsuallyOnVariant="UD_CYBP Neck"
+                         Category="Animal" />
     
   </bodyparttypevariants>
+
 
   <anatomies>
     <!--
@@ -131,6 +188,7 @@
     
     -->
     <anatomy Name="UD_CYBP Octopod" BodyType="UD_CYBP FootBody" Category="Mollusk">
+      
       <part Type="UD_CYBP Tentacle" Laterality="Upper Right">
         <part Type="UD_CYBP Suckers" Laterality="Upper Right" SupportsDependent="Upper WornOnSuckers" />
       </part>
@@ -168,6 +226,7 @@
       <part Type="UD_CYBP WornOnSuckers" Laterality="Outer" DependsOn="Outer WornOnSuckers" />
       <part Type="UD_CYBP WornOnSuckers" Laterality="Inner" DependsOn="Inner WornOnSuckers" />
       <part Type="UD_CYBP WornOnSuckers" Laterality="Lower" DependsOn="Lower WornOnSuckers" />
+      
     </anatomy>
 
     <!--
@@ -208,6 +267,7 @@
       <part Type="UD_CYBP Stomatopod Thoracopods" Laterality="Lower" DependsOn="Lower Stomatopod Thoracopods" />
       
       <part Type="Back" />
+      
       <part Type="UD_CYBP Stomatopod Missile Claw" Laterality="Right" />
       <part Type="UD_CYBP Stomatopod Missile Claw" Laterality="Left" />
       
@@ -216,6 +276,9 @@
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind" />
+      
+      <part Type="UD_CYBP Fanned Tail" />
+      
     </anatomy>
     
     <!-- Spear Variant -->
@@ -251,6 +314,7 @@
       <part Type="UD_CYBP Stomatopod Thoracopods" Laterality="Lower" DependsOn="Lower Stomatopod Thoracopods" />
 
       <part Type="Back" />
+      
       <part Type="Missile Weapon" Laterality="Right" />
       <part Type="Missile Weapon" Laterality="Left" />
       
@@ -259,6 +323,9 @@
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind" />
+      
+      <part Type="UD_CYBP Fanned Tail" />
+      
     </anatomy>
     
     <!-- Hatchet Variant -->
@@ -294,6 +361,7 @@
       <part Type="UD_CYBP Stomatopod Thoracopods" Laterality="Lower" DependsOn="Lower Stomatopod Thoracopods" />
 
       <part Type="Back" />
+      
       <part Type="Missile Weapon" Laterality="Right" />
       <part Type="Missile Weapon" Laterality="Left" />
       
@@ -302,6 +370,9 @@
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind" />
+      
+      <part Type="UD_CYBP Fanned Tail" />
+      
     </anatomy>
     
     <!-- Smasher Variant -->
@@ -337,6 +408,7 @@
       <part Type="UD_CYBP Stomatopod Thoracopods" Laterality="Lower" DependsOn="Lower Stomatopod Thoracopods" />
 
       <part Type="Back" />
+      
       <part Type="Missile Weapon" Laterality="Right" />
       <part Type="Missile Weapon" Laterality="Left" />
       
@@ -345,6 +417,9 @@
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind Mid" />
       <part Type="UD_CYBP Stomatopod Pleopods" Laterality="Hind" />
+      
+      <part Type="UD_CYBP Fanned Tail" />
+      
     </anatomy>
     
     <!--
@@ -358,14 +433,16 @@
     
     -->
     <anatomy Name="UD_CYBP Probiscimorph" Category="Animal">
+      
       <part Type="Head">
         <part Type="Face">
-          <part Type="Arm">
-            <part Type="Hand"/>
+          <part Type="UD_CYBP Trunk">
+            <part Type="UD_CYBP Prehensile Nostrils"/>
           </part>
         </part>
       </part>
       <part Type="Back" />
+      
       <part Type="Arm" Laterality="Right">
         <part Type="Hand" Laterality="Right" SupportsDependent="Hands" />
       </part>
@@ -373,20 +450,56 @@
         <part Type="Hand" Laterality="Left" SupportsDependent="Hands" />
       </part>
       <part Type="Hands" DependsOn="Hands" />
+      
       <part Type="Missile Weapon" Laterality="Right" />
       <part Type="Missile Weapon" Laterality="Left" />
+      
       <part Type="Feet" />
+      
     </anatomy>
+    
+    <anatomy Name="UD_CYBP Tailed Probiscimorph" Category="Animal">
+      
+      <part Type="Head">
+        <part Type="Face">
+          <part Type="UD_CYBP Trunk">
+            <part Type="UD_CYBP Prehensile Nostrils"/>
+          </part>
+        </part>
+      </part>
+      
+      <part Type="Back" />
+      
+      <part Type="Arm" Laterality="Right">
+        <part Type="Hand" Laterality="Right" SupportsDependent="Hands" />
+      </part>
+      <part Type="Arm" Laterality="Left">
+        <part Type="Hand" Laterality="Left" SupportsDependent="Hands" />
+      </part>
+      <part Type="Hands" DependsOn="Hands" />
+      
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+      
+      <part Type="Feet" />
+
+      <part Type="Tail" />
+      
+    </anatomy>
+    
     <!--
     
     Anthropoids (monkeys)
     
     -->
     <anatomy Name="UD_CYBP Anthropoid" Category="Animal">
+      
       <part Type="Head">
         <part Type="Face"/>
       </part>
+      
       <part Type="Back" />
+      
       <part Type="Arm" Laterality="Right">
         <part Type="Hand" Laterality="Right" SupportsDependent="Hands" />
       </part>
@@ -394,18 +507,111 @@
         <part Type="Hand" Laterality="Left" SupportsDependent="Hands" />
       </part>
       <part Type="Hands" DependsOn="Hands" />
+      
       <part Type="Missile Weapon" Laterality="Right" />
       <part Type="Missile Weapon" Laterality="Left" />
+
       <part Type="Leg" Laterality="Right">
-        <part Type="Hand" Laterality="Right" SupportsDependent="Feet" />
+        <part Type="UD_CYBP Prehensile Foot" Laterality="Right" SupportsDependent="Prehensile Feet" />
       </part>
       <part Type="Leg" Laterality="Left">
-        <part Type="Hand" Laterality="Left" SupportsDependent="Feet" />
+        <part Type="UD_CYBP Prehensile Foot" Laterality="Left" SupportsDependent="Prehensile Feet" />
       </part>
-      <part Type="Hands" DependsOn="Feet" />
+      <part Type="UD_CYBP Prehensile Feet" DependsOn="Prehensile Feet" />
+      
+    </anatomy>
+    
+    <anatomy Name="UD_CYBP Tailed Anthropoid" Category="Animal">
+      
+      <part Type="Head">
+        <part Type="Face"/>
+      </part>
+      
+      <part Type="Back" />
+      
+      <part Type="Arm" Laterality="Right">
+        <part Type="Hand" Laterality="Right" SupportsDependent="Hands" />
+      </part>
+      <part Type="Arm" Laterality="Left">
+        <part Type="Hand" Laterality="Left" SupportsDependent="Hands" />
+      </part>
+      <part Type="Hands" DependsOn="Hands" />
+      
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+      
+      <part Type="Leg" Laterality="Right">
+        <part Type="UD_CYBP Prehensile Foot" Laterality="Right" SupportsDependent="Prehensile Feet" />
+      </part>
+      <part Type="Leg" Laterality="Left">
+        <part Type="UD_CYBP Prehensile Foot" Laterality="Left" SupportsDependent="Prehensile Feet" />
+      </part>
+      <part Type="UD_CYBP Prehensile Feet" DependsOn="Prehensile Feet" />
+      
       <part Type="Tail">
-        <part Type="Hand"/>
+        <part Type="UD_CYBP Prehensile Tail"/>
       </part>
+      
+    </anatomy>
+    
+    <!--
+    
+    Girafform (Giraffe)
+    
+    -->
+    <anatomy Name="UD_CYBP Girafform" Category="Animal">
+      
+      <part Type="UD_CYBP Neck">
+        <part Type="Head">
+          <part Type="Face">
+            <part Type="UD_CYBP Prehensile Tongue" />
+          </part>
+        </part>
+      </part>
+      
+      <part Type="Back" />
+      
+      <part Type="Arm" Laterality="Right">
+        <part Type="Hand" Laterality="Right" SupportsDependent="Hands" />
+      </part>
+      <part Type="Arm" Laterality="Left">
+        <part Type="Hand" Laterality="Left" SupportsDependent="Hands" />
+      </part>
+      <part Type="Hands" DependsOn="Hands" />
+      
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+      
+      <part Type="Feet" />
+    </anatomy>
+    
+    <anatomy Name="UD_CYBP Tailed Girafform" Category="Animal">
+      
+      <part Type="UD_CYBP Neck">
+        <part Type="Head">
+          <part Type="Face">
+            <part Type="UD_CYBP Prehensile Tongue" />
+          </part>
+        </part>
+      </part>
+      
+      <part Type="Back" />
+      
+      <part Type="Arm" Laterality="Right">
+        <part Type="Hand" Laterality="Right" SupportsDependent="Hands" />
+      </part>
+      <part Type="Arm" Laterality="Left">
+        <part Type="Hand" Laterality="Left" SupportsDependent="Hands" />
+      </part>
+      <part Type="Hands" DependsOn="Hands" />
+      
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+      
+      <part Type="Feet" />
+
+      <part Type="Tail" />
+      
     </anatomy>
   </anatomies>
 

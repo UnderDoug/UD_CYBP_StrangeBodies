@@ -46,30 +46,6 @@
     <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_longBlade_saltHopperMandible_blocked" />
   </object>
   <!-- Pistol Variant -->
-  <!--object Name="UD_CYBP Stomatopod Pistol Claw Pistol" Inherits="NaturalMissileWeapon">
-    <part Name="Render" DisplayName="pistol claw"
-          RenderString="L" ColorString="&amp;w"
-          Tile="Items/sw_fleshgun.bmp"
-          TileColor="&amp;w" DetailColor="B" />
-    <part Name="Description" Short="Evolutionary pressure has molded the dactyl joints, adhesive plaques, and a tooth-cavity system into a pistol-like claw that supports snapping with such force that it tears a tiny cavity in the air in front of it. This cavity violently implodes, producing sonoluminescence, with the aid of the weight of the atmosphere." />
-    <part Name="MissileWeapon"
-          WeaponAccuracy="12" RangeIncrement="6"
-          AmmoChar="&amp;B*"
-          Skill="Pistol"
-          SlotType="UD_CYBP Stomatopod Pistol Claw" />
-    <part Name="BioAmmoLoader"
-          MaxCapacity="1" Available="1" TurnsToGenerate="3"
-          IsRealityDistortionBased="false"
-          IsEMPSensitive="false"
-          ProjectileObject="Projectile_UD_CYBP Stomatopod Pistol Claws_Energy" />
-    <tag Name="MissileFireSound" Value="sfx_slugsnout_missile_fire" />
-    <part Name="MeleeWeapon"
-          MaxStrengthBonus="999"
-          BaseDamage="1d4"
-          Skill="Cudgel" Stat="Strength"
-          Slot="Missile Weapon" />
-    <tag Name="UsesSlots" Value="Hand" />
-  </object-->
   <object Name="UD_CYBP Stomatopod Pistol Claw Pistol" Inherits="MissileWeapon">
     <part Name="Render" DisplayName="pistol claw"
           RenderString="L" ColorString="&amp;w"
@@ -86,6 +62,7 @@
           MaxCapacity="1" Available="1" TurnsToGenerate="5"
           IsRealityDistortionBased="false"
           IsEMPSensitive="false"
+          IsRustSensitive="false"
           ProjectileObject="Projectile_UD_CYBP Stomatopod Pistol Claws_Energy" />
     <tag Name="UsesSlots" Value="Missile Weapon" />
     <removepart Name="TinkerItem" />
@@ -112,103 +89,78 @@
           TileColor="&amp;B" DetailColor="c" />
     <part Name="Projectile" BasePenetration="8" BaseDamage="1d6" ColorString="&amp;B" PassByVerb="pop" />
   </object>
-  <object Name="UD_CYBP Stomatopod Pistol Claw Claw" Inherits="NaturalWeapon">
-    <part Name="Render" DisplayName="pistol claw"
-          RenderString="L" ColorString="&amp;w"
+
+  <!-- Variant Base -->
+  <object Name="UD_CYBP Stomatopod Base Claw" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="claw"
+          ColorString="&amp;w"
           Tile="Creatures/natural-weapon-pincer.bmp"
-          TileColor="&amp;w" DetailColor="B" />
-    <part Name="Description" Short="Evolutionary pressure has molded the dactyl joints, adhesive plaques, and a tooth-cavity system into a pistol-like claw that supports snapping with such force that it tears a tiny cavity in the air in front of it. This cavity violently implodes, producing sonoluminescence, with the aid of the weight of the atmosphere." />
-    <part Name="MeleeWeapon"
-          MaxStrengthBonus="12"
-          BaseDamage="1d6"
-          Skill="Cudgel" Stat="Strength"
-          Slot="Missile Weapon" />
-    <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_saltHopperMandible_swing" />
-    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_longBlade_saltHopperMandible_blocked" />
-    </object>
-  <!--object Name="UD_CYBP Stomatopod Pistol Claw Pistol" Inherits="NaturalMissileWeapon">
-    <part Name="Render" DisplayName="pistol claw"
-          RenderString="L" ColorString="&amp;w"
-          Tile="Items/sw_fleshgun.bmp"
-          TileColor="&amp;w" DetailColor="B" />
-    <part Name="Description" Short="Evolutionary pressure has molded the dactyl joints, adhesive plaques, and a tooth-cavity system into a pistol-like claw that supports snapping with such force that it tears a tiny cavity in the air in front of it. This cavity violently implodes, producing sonoluminescence, with the aid of the weight of the atmosphere." />
-    <part Name="MeleeWeapon"
-          MaxStrengthBonus="999"
-          BaseDamage="1d4"
-          Skill="Cudgel" Stat="Strength"
-          Slot="Hand" />
-    <part Name="MissileWeapon"
-          WeaponAccuracy="12" RangeIncrement="6"
-          AmmoChar="&amp;B*"
-          Skill="Pistol" />
-    <part Name="BioAmmoLoader"
-          MaxCapacity="1" Available="1" TurnsToGenerate="3"
-          IsRealityDistortionBased="false"
-          IsEMPSensitive="false"
-          ProjectileObject="Projectile_UD_CYBP Stomatopod Pistol Claws_Energy" />
-    <tag Name="UsesSlots" Value="UD_CYBP Stomatopod Pistol Claw,Missile Weapon,UD_CYBP Stomatopod Missile Claw" />
-  </object>
-  <object Name="Projectile_UD_CYBP Stomatopod Pistol Claws_Energy" Inherits="TemporaryEnergyProjectile">
-    <part Name="Render" DisplayName="sonic blast"
-          RenderString="*" ColorString="&amp;B"
-          TileColor="&amp;B" DetailColor="c" />
-    <part Name="Projectile" BasePenetration="8" BaseDamage="1d6" ColorString="&amp;B" PassByVerb="pop" />
-  </object>
-  <object Name="UD_CYBP Stomatopod Pistol Claw Claw" Inherits="NaturalWeapon">
-    <part Name="Render" DisplayName="pistol claw"
-          RenderString="L" ColorString="&amp;w"
-          Tile="Creatures/natural-weapon-pincer.bmp"
-          TileColor="&amp;w" DetailColor="B" />
-    <part Name="Description" Short="Evolutionary pressure has molded the dactyl joints, adhesive plaques, and a tooth-cavity system into a pistol-like claw that supports snapping with such force that it tears a tiny cavity in the air in front of it. This cavity violently implodes, producing sonoluminescence, with the aid of the weight of the atmosphere." />
-    <part Name="MeleeWeapon"
-          MaxStrengthBonus="999"
-          BaseDamage="1d4"
-          Skill="Cudgel" Stat="Strength"
-          Slot="Hand" />
-    <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_saltHopperMandible_swing" />
-    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_longBlade_saltHopperMandible_blocked" />
-  </object-->
-  <!-- Spear Variant-->
-  <object Name="UD_CYBP Stomatopod Spear Claw" Inherits="NaturalWeapon">
-    <part Name="Render" DisplayName="spear claw"
-          ColorString="&amp;w" RenderString="Y"
-          Tile="Creatures/natural-weapon-mandible.bmp"
           TileColor="&amp;w" DetailColor="W" />
     <part Name="MeleeWeapon"
           MaxStrengthBonus="999"
           BaseDamage="1d4"
-          Skill="LongBlades" Stat="Strength"
+          Stat="Strength"
           Slot="Hand" />
     <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_saltHopperMandible_swing" />
     <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_longBlade_saltHopperMandible_blocked" />
+    <tag Name="BaseObject" Value="*noinherit" />
+  </object>
+  <!-- Spear Variant-->
+  <object Name="UD_CYBP Stomatopod Spear Claw" Inherits="UD_CYBP Stomatopod Base Claw">
+    <part Name="Render" DisplayName="spear claw" RenderString="Y" Tile="Items/sw_longblade_13.bmp" />
+    <part Name="MeleeWeapon" Skill="LongBlades" />
   </object>
   <!-- Smasher Variant-->
-  <object Name="UD_CYBP Stomatopod Smasher Claw" Inherits="NaturalWeapon">
-    <part Name="Render" DisplayName="smasher claw"
-          ColorString="&amp;w" RenderString="B"
-          Tile="Creatures/natural-weapon-knob.bmp"
-          TileColor="&amp;w" DetailColor="W" />
-    <part Name="MeleeWeapon"
-          MaxStrengthBonus="999"
-          BaseDamage="1d4"
-          Skill="Cudgel" Stat="Strength"
-          Slot="Hand" />
-    <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_saltHopperMandible_swing" />
-    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_longBlade_saltHopperMandible_blocked" />
+  <object Name="UD_CYBP Stomatopod Smasher Claw" Inherits="UD_CYBP Stomatopod Base Claw">
+    <part Name="Render" DisplayName="smasher claw" RenderString="B" Tile="Creatures/natural-weapon-knob.bmp" />
+    <part Name="MeleeWeapon" Skill="Cudgel" />
   </object>
   <!-- Hatchet Variant-->
-  <object Name="UD_CYBP Stomatopod Hatchet Claw" Inherits="NaturalWeapon">
-    <part Name="Render" DisplayName="hatchet claw"
-          ColorString="&amp;w" RenderString="J"
-          Tile="Creatures/natural-weapon-shovel.bmp"
+  <object Name="UD_CYBP Stomatopod Hatchet Claw" Inherits="UD_CYBP Stomatopod Base Claw">
+    <part Name="Render" DisplayName="hatchet claw" RenderString="J" Tile="Creatures/natural-weapon-shovel.bmp" />
+    <part Name="MeleeWeapon" Skill="Axe" />
+  </object>
+  
+  <!--
+    
+    Probiscimorph (elephant)
+    
+    -->
+  <object Name="UD_CYBP Prehensile Nostrils" Inherits="SoftManipulator">
+    <part Name="Render" DisplayName="prehensile nostrils"
+          ColorString="&amp;w" RenderString="B"
+          Tile="Creatures/natural-weapon-manipulator.bmp"
           TileColor="&amp;w" DetailColor="W" />
-    <part Name="MeleeWeapon"
-          MaxStrengthBonus="999"
-          BaseDamage="1d4"
-          Skill="Axe" Stat="Strength"
-          Slot="Hand" />
-    <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_saltHopperMandible_swing" />
-    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_longBlade_saltHopperMandible_blocked" />
+  </object>
+  
+  <!--
+    
+    Anthropoids (monkeys)
+    
+    -->
+  <object Name="UD_CYBP Prehensile Foot" Inherits="DefaultFist">
+    <part Name="Render" DisplayName="foot fist"
+          ColorString="&amp;w" RenderString="B"
+          Tile="Creatures/natural-weapon-manipulator.bmp"
+          TileColor="&amp;w" DetailColor="W" />
+  </object>
+  <object Name="UD_CYBP Prehensile Tail" Inherits="SoftManipulator">
+    <part Name="Render" DisplayName="prehensile tail"
+          ColorString="&amp;w" RenderString="S"
+          Tile="Creatures/natural-weapon-manipulator.bmp"
+          TileColor="&amp;w" DetailColor="W" />
+  </object>
+
+  <!--
+    
+    Girafform (Giraffe)
+    
+    -->
+  <object Name="UD_CYBP Prehensile Tongue" Inherits="SoftManipulator">
+    <part Name="Render" DisplayName="prehensile tongue"
+          ColorString="&amp;w" RenderString="S"
+          Tile="Creatures/natural-weapon-manipulator.bmp"
+          TileColor="&amp;w" DetailColor="W" />
   </object>
   
 </objects>
