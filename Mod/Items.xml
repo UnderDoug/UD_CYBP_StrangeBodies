@@ -123,6 +123,23 @@
   
   <!--
     
+    Seraphorm ("biblical" angel)
+    
+    -->
+  <object Name="UD_CYBP Seraphorm Dactyl Hub" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="dactyl hub"
+          ColorString="&amp;K^O" RenderString="O"
+          Tile="Creatures/natural-weapon-fist.bmp"
+          TileColor="&amp;K" DetailColor="O" />
+    <part Name="MeleeWeapon"
+          MaxStrengthBonus="999"
+          BaseDamage="2d3-2"
+          Stat="Willpower"
+          Slot="Hand" />
+  </object>
+  
+  <!--
+    
     Probiscimorph (elephant)
     
     -->

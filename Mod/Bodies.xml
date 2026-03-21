@@ -129,6 +129,51 @@
 
     <!--
     
+    Seraphorm ("biblical" angel)
+    
+    -->
+    <bodyparttypevariant VariantOf="Body" Type="UD_CYBP Seraphorm Centre"
+                         DescriptionPrefix="Consecrating" Name="centre" Description="Centre"
+                         Mobility="2"
+                         Category="Extradimensional" />
+    
+    <bodyparttypevariant VariantOf="Thrown Weapon" Type="UD_CYBP Seraphorm Clutch"
+                         DescriptionPrefix="Within" Name="clutch" Description="Clutch"
+                         Category="Extradimensional" />
+    
+    <bodyparttypevariant VariantOf="Arm" Type="UD_CYBP Seraphorm Span"
+                         DescriptionPrefix="Decorating" Name="span" Description="Span"
+                         Mobility="1"
+                         Category="Extradimensional" />
+
+    <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Seraphorm Dactyl Hub"
+                         DescriptionPrefix="Impressed by" Name="dactyl hub" Description="Dactyl Hub"
+                         DefaultBehavior="UD_CYBP Seraphorm Dactyl Hub"
+                         UsuallyOnVariant="UD_CYBP Span"
+                         Category="Extradimensional" />
+
+    <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP Seraphorm Dactylae"
+                         DescriptionPrefix="Presented for" Name="dactylae" Description="Dactylae"
+                         Plural="true" ImpliedBy="UD_CYBP Dactyl Hub"
+                         Category="Extradimensional" />
+
+    <bodyparttypevariant VariantOf="Face" Type="UD_CYBP Seraphorm Observation"
+                         DescriptionPrefix="Under" Name="observation" Description="Observation"
+                         UsuallyOn="UD_CYBP Dactyl Hub"
+                         Category="Extradimensional" />
+    
+    <bodyparttypevariant VariantOf="Missile Weapon" Type="UD_CYBP Seraphorm Command"
+                         Name="command" Description="Command"
+                         RequiresType="UD_CYBP Dactyl Hub"
+                         Category="Extradimensional" />
+    
+    <bodyparttypevariant VariantOf="Floating Nearby" Type="UD_CYBP Seraphorm Will"
+                         DescriptionPrefix="Exertion of" Name="will" Description="Will"
+                         Category="Extradimensional" />
+
+
+    <!--
+    
     Probiscimorph (elephant)
     
     -->
@@ -428,6 +473,44 @@
     Seraphorm ("biblical" angel)
     
     -->
+    <anatomy Name="UD_CYBP Seraphorm" BodyType="UD_CYBP Seraphorm Centre" FloatingNearby="UD_CYBP Seraphorm Will" ThrownWeapon="UD_CYBP Seraphorm Clutch" Category="Extradimensional">
+      
+      <part Type="UD_CYBP Seraphorm Span" Laterality="Upper">
+        <part Type="UD_CYBP Seraphorm Dactyl Hub" Laterality="Upper Inner" SupportsDependent="Upper UD_CYBP Seraphorm Dactylae">
+          <part Type="UD_CYBP Seraphorm Observation" Laterality="Upper Inner" />
+        </part>
+        <part Type="UD_CYBP Seraphorm Dactyl Hub" Laterality="Upper Outer" SupportsDependent="Upper UD_CYBP Seraphorm Dactylae">
+          <part Type="UD_CYBP Seraphorm Observation" Laterality="Upper Outer" />
+        </part>
+        <part Type="UD_CYBP Seraphorm Dactylae" Laterality="Upper" DependsOn="Upper UD_CYBP Seraphorm Dactylae" />
+      </part>
+      
+      <part Type="UD_CYBP Seraphorm Span" Laterality="Mid">
+        <part Type="UD_CYBP Seraphorm Dactyl Hub" Laterality="Mid Inner" SupportsDependent="Mid UD_CYBP Seraphorm Dactylae">
+          <part Type="UD_CYBP Seraphorm Observation" Laterality="Mid Inner" />
+        </part>
+        <part Type="UD_CYBP Seraphorm Dactyl Hub" Laterality="Mid Outer" SupportsDependent="Mid UD_CYBP Seraphorm Dactylae">
+          <part Type="UD_CYBP Seraphorm Observation" Laterality="Mid Outer" />
+        </part>
+        <part Type="UD_CYBP Seraphorm Dactylae" Laterality="Mid" DependsOn="Mid UD_CYBP Seraphorm Dactylae" />
+      </part>
+      
+      <part Type="UD_CYBP Seraphorm Span" Laterality="Lower">
+        <part Type="UD_CYBP Seraphorm Dactyl Hub" Laterality="Lower Inner" SupportsDependent="Lower UD_CYBP Seraphorm Dactylae">
+          <part Type="UD_CYBP Seraphorm Observation" Laterality="Lower Inner" />
+        </part>
+        <part Type="UD_CYBP Seraphorm Dactyl Hub" Laterality="Lower Outer" SupportsDependent="Lower UD_CYBP Seraphorm Dactylae">
+          <part Type="UD_CYBP Seraphorm Observation" Laterality="Lower Outer" />
+        </part>
+        <part Type="UD_CYBP Seraphorm Dactylae" Laterality="Lower" DependsOn="Lower UD_CYBP Seraphorm Dactylae" />
+      </part>
+      
+      <part Type="UD_CYBP Seraphorm Command" Laterality="Right" />
+      <part Type="UD_CYBP Seraphorm Command" Laterality="Left" />
+      <part Type="UD_CYBP Seraphorm Command" Laterality="Lower" />
+      
+    </anatomy>
+    
     <!--
     
     Probiscimorph (elephant)

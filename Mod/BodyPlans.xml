@@ -45,6 +45,13 @@
         RenderString="L" TileColor="&amp;w" DetailColor="W" />
   </object>
   
+  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Seraphorm" Inherits="UD_CYBP_BaseBodyPlanEntry">
+    <tag Name="Anatomy" Value="UD_CYBP Seraphorm" />
+    <tag Name="DisplayName" Value="Seraphorm" />
+    <part Name="Render" Tile="Creatures/sw_galgal_1.bmp"
+        RenderString="S" TileColor="&amp;w" DetailColor="W" />
+  </object>
+  
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Probiscimorph" Inherits="UD_CYBP_BaseBodyPlanEntry">
     <tag Name="Anatomy" Value="UD_CYBP Probiscimorph" />
     <tag Name="DisplayName" Value="Probiscimorph" />
