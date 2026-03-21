@@ -13,6 +13,7 @@
           Slot="Hand" />
     <tag Name="SwingSound" Value="sfx_melee_naturalWeapon_fist_swing" />
     <tag Name="BlockedSound" Value="sfx_melee_naturalWeapon_fist_blocked" />
+    <tag Name="NeverStack" />
   </object>
 
   <!--
@@ -44,15 +45,18 @@
           Slot="Hand" />
     <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_saltHopperMandible_swing" />
     <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_longBlade_saltHopperMandible_blocked" />
+    <tag Name="NeverStack" />
   </object>
   <!-- Pistol Variant -->
-  <object Name="UD_CYBP Stomatopod Pistol Claw Pistol" Inherits="MissileWeapon">
+  <object Name="UD_CYBP Stomatopod Pistol Claw Pistol" Inherits="NaturalMissileWeapon">
     <part Name="Render" DisplayName="pistol claw"
           RenderString="L" ColorString="&amp;w"
           Tile="Items/sw_fleshgun.bmp"
           TileColor="&amp;w" DetailColor="B" />
     <part Name="Description" Short="Evolutionary pressure has molded the dactyl joints, adhesive plaques, and a tooth-cavity system into a pistol-like claw that supports snapping with such force that it tears a tiny cavity in the air in front of it. This cavity violently implodes, producing sonoluminescence, with the aid of the weight of the atmosphere." />
-    <part Name="Physics" Weight="1" Organic="true" />
+    <part Name="NoBreak" />
+    <part Name="NoDamage" />
+    <part Name="NoRust" />
     <part Name="MissileWeapon"
           WeaponAccuracy="12" RangeIncrement="6"
           AmmoChar="&amp;B*"
@@ -64,24 +68,23 @@
           IsEMPSensitive="false"
           IsRustSensitive="false"
           ProjectileObject="Projectile_UD_CYBP Stomatopod Pistol Claws_Energy" />
+    <part Name="EnergyAmmoLoader" ChargeUse="0"
+          IsPowerSwitchSensitive="true"
+          IsRealityDistortionBased="false"
+          IsEMPSensitive="false"
+          IsRustSensitive="false" />
+    <part Name="PowerSwitch"
+          EnergyCost="0"
+          FlippableWithoutUnderstanding="true"
+          ActivateSuccessMessage="" ActivateFailureMessage=""
+          DeactivateSuccessMessage="" DeactivateFailureMessage="" />
     <tag Name="UsesSlots" Value="Missile Weapon" />
+    <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Pistols/sfx_missile_psychalFleshgun_fire" />
     <removepart Name="TinkerItem" />
-    <intproperty Name="Natural" Value="1" />
-    <part Name="NaturalEquipment" />
-    <part Name="Cursed" RevealInDescription="false" />
-    <part Name="NoBreak" />
-    <part Name="NoDamage" />
-    <part Name="NoRust" />
-    <intproperty Name="Bleeds" Value="1" />
-    <tag Name="BleedLiquid" Value="blood-1000" />
-    <tag Name="LiveAnimal" />
-    <tag Name="ExcludeFromDynamicEncounters" />
-    <tag Name="NaturalGear" />
     <tag Name="NoDefaultBehavior" />
     <tag Name="NoSparkingQuest" />
     <tag Name="ShowAsPhysicalFeature" />
     <stag Name="Contemporary" />
-    <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Pistols/sfx_missile_psychalFleshgun_fire" />
   </object>
   <object Name="Projectile_UD_CYBP Stomatopod Pistol Claws_Energy" Inherits="TemporaryEnergyProjectile">
     <part Name="Render" DisplayName="sonic blast"
@@ -96,29 +99,48 @@
           ColorString="&amp;w"
           Tile="Creatures/natural-weapon-pincer.bmp"
           TileColor="&amp;w" DetailColor="W" />
+    <part Name="NoBreak" />
+    <part Name="NoDamage" />
+    <part Name="NoRust" />
     <part Name="MeleeWeapon"
+          HitBonus="-2"
           MaxStrengthBonus="999"
           BaseDamage="1d4"
           Stat="Strength"
           Slot="Hand" />
+    <tag Name="UsesSlots" Value="Hand" />
     <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_saltHopperMandible_swing" />
     <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_longBlade_saltHopperMandible_blocked" />
     <tag Name="BaseObject" Value="*noinherit" />
+    <tag Name="NoDefaultBehavior" />
+    <tag Name="NoSparkingQuest" />
+    <tag Name="ShowAsPhysicalFeature" />
+    <tag Name="NeverStack" />
+    <stag Name="Contemporary" />
   </object>
   <!-- Spear Variant-->
   <object Name="UD_CYBP Stomatopod Spear Claw" Inherits="UD_CYBP Stomatopod Base Claw">
     <part Name="Render" DisplayName="spear claw" RenderString="Y" Tile="Items/sw_longblade_13.bmp" />
-    <part Name="MeleeWeapon" Skill="LongBlades" />
+    <part Name="Description" Short="A raptorial appendage tipped with a set of spiny barbs &quot;designed&quot; by evolutionary pressure to be flicked forward at imperceptible speeds, skewering anything on their unfortunate end; although ill-configured for grasping." />
+    <part Name="MeleeWeapon"
+          BaseDamage="2d3"
+          Skill="LongBlades" />
   </object>
   <!-- Smasher Variant-->
   <object Name="UD_CYBP Stomatopod Smasher Claw" Inherits="UD_CYBP Stomatopod Base Claw">
     <part Name="Render" DisplayName="smasher claw" RenderString="B" Tile="Creatures/natural-weapon-knob.bmp" />
-    <part Name="MeleeWeapon" Skill="Cudgel" />
+    <part Name="Description" Short="An overdeveloped claw-turned-club, poorly configured for gripping, but a deadly crushing weapon in the right hands... or in place of them." />
+    <part Name="MeleeWeapon"
+          BaseDamage="3d2"
+          Skill="Cudgel" />
   </object>
   <!-- Hatchet Variant-->
   <object Name="UD_CYBP Stomatopod Hatchet Claw" Inherits="UD_CYBP Stomatopod Base Claw">
     <part Name="Render" DisplayName="hatchet claw" RenderString="J" Tile="Creatures/natural-weapon-shovel.bmp" />
-    <part Name="MeleeWeapon" Skill="Axe" />
+    <part Name="Description" Short="A uniquely scythe-like claw rests affront a sturdy dactyl-joint in anticipatory suspense; a standing promise that whatsoever it strikes at will be cleaved in twain." />
+    <part Name="MeleeWeapon"
+          BaseDamage="1d3+2"
+          Skill="Axe" />
   </object>
   
   <!--
@@ -136,6 +158,7 @@
           BaseDamage="2d3-2"
           Stat="Willpower"
           Slot="Hand" />
+    <tag Name="NeverStack" />
   </object>
   
   <!--
@@ -148,6 +171,7 @@
           ColorString="&amp;w" RenderString="B"
           Tile="Creatures/natural-weapon-manipulator.bmp"
           TileColor="&amp;w" DetailColor="W" />
+    <tag Name="NeverStack" />
   </object>
   
   <!--
@@ -160,12 +184,14 @@
           ColorString="&amp;w" RenderString="B"
           Tile="Creatures/natural-weapon-manipulator.bmp"
           TileColor="&amp;w" DetailColor="W" />
+    <tag Name="NeverStack" />
   </object>
   <object Name="UD_CYBP Prehensile Tail" Inherits="SoftManipulator">
     <part Name="Render" DisplayName="prehensile tail"
           ColorString="&amp;w" RenderString="S"
           Tile="Creatures/natural-weapon-manipulator.bmp"
           TileColor="&amp;w" DetailColor="W" />
+    <tag Name="NeverStack" />
   </object>
 
   <!--
@@ -178,6 +204,7 @@
           ColorString="&amp;w" RenderString="S"
           Tile="Creatures/natural-weapon-manipulator.bmp"
           TileColor="&amp;w" DetailColor="W" />
+    <tag Name="NeverStack" />
   </object>
   
 </objects>

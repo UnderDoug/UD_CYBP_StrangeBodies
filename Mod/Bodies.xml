@@ -60,6 +60,11 @@
                          Plural="true" UsuallyOnVariant="Cheliped"
                          Category="Arthropod" />
     
+    <bodyparttypevariant VariantOf="Arm" Type="UD_CYBP Raptorial Cheliped"
+                         Name="raptorial cheliped" Description="Raptorial Cheliped"
+                         UsuallyOnVariant="UD_CYBP Thorax"
+                         Category="Arthropod" />
+    
     <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP Stomatopod Thoracopods"
                          DescriptionPrefix="Worn on" Name="thoracopods" Description="Thoracopods"
                          Plural="true" ImpliedBy="Hand"
@@ -78,8 +83,8 @@
     <!-- Pistol Variant -->
     <bodyparttypevariant VariantOf="Missile Weapon" Type="UD_CYBP Stomatopod Pistol Claw"
                          Name="pistol claw" Description="Pistol Claw"
-                         UsuallyOnVariant="Cheliped"
-                         RequiresType="Cheliped" Abstract="false"
+                         UsuallyOnVariant="UD_CYBP Raptorial Cheliped"
+                         RequiresType="UD_CYBP Raptorial Cheliped" Abstract="false"
                          Category="Arthropod" />
     
     <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP Stomatopod Pistol Claws"
@@ -94,8 +99,7 @@
     <!-- Spear Variant -->
     <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Stomatopod Spear Claw"
                          Name="spear claw" Description="Spear Claw"
-                         DefaultBehavior="UD_CYBP Stomatopod Spear Claw"
-                         Plural="true" UsuallyOnVariant="Cheliped"
+                         Plural="true" UsuallyOnVariant="UD_CYBP Raptorial Cheliped"
                          Category="Arthropod" />
     
     <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP Stomatopod Spear Claws"
@@ -106,8 +110,7 @@
     <!-- Smasher Variant -->
     <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Stomatopod Smasher Claw"
                          Name="spear claw" Description="Smasher Claw"
-                         DefaultBehavior="UD_CYBP Stomatopod Smasher Claw"
-                         Plural="true" UsuallyOnVariant="Cheliped"
+                         Plural="true" UsuallyOnVariant="UD_CYBP Raptorial Cheliped"
                          Category="Arthropod" />
     
     <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP Stomatopod Smasher Claws"
@@ -118,8 +121,7 @@
     <!-- Hatchet Variant -->
     <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Stomatopod Hatchet Claw"
                          Name="hatchet claw" Description="Hatchet Claw"
-                         DefaultBehavior="UD_CYBP Stomatopod Hatchet Claw"
-                         Plural="true" UsuallyOnVariant="Cheliped"
+                         Plural="true" UsuallyOnVariant="UD_CYBP Raptorial Cheliped"
                          Category="Arthropod" />
     
     <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP Stomatopod Hatchet Claws"
@@ -143,34 +145,33 @@
     
     <bodyparttypevariant VariantOf="Arm" Type="UD_CYBP Seraphorm Span"
                          DescriptionPrefix="Decorating" Name="span" Description="Span"
-                         Mobility="1"
+                         Mobility="1" Contact="false"
                          Category="Extradimensional" />
 
     <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Seraphorm Dactyl Hub"
                          DescriptionPrefix="Impressed by" Name="dactyl hub" Description="Dactyl Hub"
-                         DefaultBehavior="UD_CYBP Seraphorm Dactyl Hub"
+                         DefaultBehavior="UD_CYBP Seraphorm Dactyl Hub" Contact="false"
                          UsuallyOnVariant="UD_CYBP Span"
                          Category="Extradimensional" />
 
     <bodyparttypevariant VariantOf="Hands" Type="UD_CYBP Seraphorm Dactylae"
                          DescriptionPrefix="Presented for" Name="dactylae" Description="Dactylae"
-                         Plural="true" ImpliedBy="UD_CYBP Dactyl Hub"
+                         Plural="true" ImpliedBy="UD_CYBP Dactyl Hub" Contact="false"
                          Category="Extradimensional" />
 
     <bodyparttypevariant VariantOf="Face" Type="UD_CYBP Seraphorm Observation"
                          DescriptionPrefix="Under" Name="observation" Description="Observation"
-                         UsuallyOn="UD_CYBP Dactyl Hub"
+                         Contact="false" UsuallyOnVariant="UD_CYBP Dactyl Hub"
                          Category="Extradimensional" />
     
     <bodyparttypevariant VariantOf="Missile Weapon" Type="UD_CYBP Seraphorm Command"
                          Name="command" Description="Command"
-                         RequiresType="UD_CYBP Dactyl Hub"
+                         Abstract="false" RequiresType="Hand"
                          Category="Extradimensional" />
     
     <bodyparttypevariant VariantOf="Floating Nearby" Type="UD_CYBP Seraphorm Will"
                          DescriptionPrefix="Exertion of" Name="will" Description="Will"
                          Category="Extradimensional" />
-
 
     <!--
     
@@ -287,10 +288,10 @@
         <part Type="UD_CYBP Eye Stalks" />
       </part>
       
-      <part Type="Cheliped" Laterality="Upper Right Fore">
+      <part Type="UD_CYBP Raptorial Cheliped" Laterality="Upper Right Fore">
         <part Type="UD_CYBP Stomatopod Pistol Claw" Laterality="Right" SupportsDependent="Stomatopod Claws" />
       </part>
-      <part Type="Cheliped" Laterality="Upper Left Fore">
+      <part Type="UD_CYBP Raptorial Cheliped" Laterality="Upper Left Fore">
         <part Type="UD_CYBP Stomatopod Pistol Claw" Laterality="Left" SupportsDependent="Stomatopod Claws" />
       </part>
       
@@ -334,10 +335,10 @@
         <part Type="UD_CYBP Eye Stalks" />
       </part>
 
-      <part Type="Cheliped" Laterality="Upper Right Fore">
+      <part Type="UD_CYBP Raptorial Cheliped" Laterality="Upper Right Fore">
         <part Type="UD_CYBP Stomatopod Spear Claw" Laterality="Right" SupportsDependent="Stomatopod Claws" />
       </part>
-      <part Type="Cheliped" Laterality="Upper Left Fore">
+      <part Type="UD_CYBP Raptorial Cheliped" Laterality="Upper Left Fore">
         <part Type="UD_CYBP Stomatopod Spear Claw" Laterality="Left" SupportsDependent="Stomatopod Claws" />
       </part>
 
@@ -381,10 +382,10 @@
         <part Type="UD_CYBP Eye Stalks" />
       </part>
 
-      <part Type="Cheliped" Laterality="Upper Right Fore">
+      <part Type="UD_CYBP Raptorial Cheliped" Laterality="Upper Right Fore">
         <part Type="UD_CYBP Stomatopod Hatchet Claw" Laterality="Right" SupportsDependent="Stomatopod Claws" />
       </part>
-      <part Type="Cheliped" Laterality="Upper Left Fore">
+      <part Type="UD_CYBP Raptorial Cheliped" Laterality="Upper Left Fore">
         <part Type="UD_CYBP Stomatopod Hatchet Claw" Laterality="Left" SupportsDependent="Stomatopod Claws" />
       </part>
 
@@ -428,10 +429,10 @@
         <part Type="UD_CYBP Eye Stalks" />
       </part>
 
-      <part Type="Cheliped" Laterality="Upper Right Fore">
+      <part Type="UD_CYBP Raptorial Cheliped" Laterality="Upper Right Fore">
         <part Type="UD_CYBP Stomatopod Smasher Claw" Laterality="Right" SupportsDependent="Stomatopod Claws" />
       </part>
-      <part Type="Cheliped" Laterality="Upper Left Fore">
+      <part Type="UD_CYBP Raptorial Cheliped" Laterality="Upper Left Fore">
         <part Type="UD_CYBP Stomatopod Smasher Claw" Laterality="Left" SupportsDependent="Stomatopod Claws" />
       </part>
 
@@ -475,24 +476,28 @@
     -->
     <anatomy Name="UD_CYBP Seraphorm" BodyType="UD_CYBP Seraphorm Centre" FloatingNearby="UD_CYBP Seraphorm Will" ThrownWeapon="UD_CYBP Seraphorm Clutch" Category="Extradimensional">
       
-      <part Type="UD_CYBP Seraphorm Span" Laterality="Upper">
-        <part Type="UD_CYBP Seraphorm Dactyl Hub" Laterality="Upper Inner" SupportsDependent="Upper UD_CYBP Seraphorm Dactylae">
-          <part Type="UD_CYBP Seraphorm Observation" Laterality="Upper Inner" />
+      <part Type="UD_CYBP Seraphorm Span" Laterality="Right">
+        <part Type="UD_CYBP Seraphorm Dactyl Hub" Laterality="Right Inner" SupportsDependent="Upper UD_CYBP Seraphorm Dactylae">
+          <part Type="UD_CYBP Seraphorm Observation" Laterality="Right Inner" />
         </part>
-        <part Type="UD_CYBP Seraphorm Dactyl Hub" Laterality="Upper Outer" SupportsDependent="Upper UD_CYBP Seraphorm Dactylae">
-          <part Type="UD_CYBP Seraphorm Observation" Laterality="Upper Outer" />
+        <part Type="UD_CYBP Seraphorm Dactyl Hub" Laterality="Right Outer" SupportsDependent="Upper UD_CYBP Seraphorm Dactylae">
+          <part Type="UD_CYBP Seraphorm Observation" Laterality="Right Outer" />
         </part>
-        <part Type="UD_CYBP Seraphorm Dactylae" Laterality="Upper" DependsOn="Upper UD_CYBP Seraphorm Dactylae" />
+        <part Type="UD_CYBP Seraphorm Dactylae" Laterality="Right" DependsOn="Upper UD_CYBP Seraphorm Dactylae">
+          <part Type="UD_CYBP Seraphorm Command" Laterality="Right" />
+        </part>
       </part>
       
-      <part Type="UD_CYBP Seraphorm Span" Laterality="Mid">
-        <part Type="UD_CYBP Seraphorm Dactyl Hub" Laterality="Mid Inner" SupportsDependent="Mid UD_CYBP Seraphorm Dactylae">
-          <part Type="UD_CYBP Seraphorm Observation" Laterality="Mid Inner" />
+      <part Type="UD_CYBP Seraphorm Span" Laterality="Left">
+        <part Type="UD_CYBP Seraphorm Dactyl Hub" Laterality="Left Inner" SupportsDependent="Left UD_CYBP Seraphorm Dactylae">
+          <part Type="UD_CYBP Seraphorm Observation" Laterality="Left Inner" />
         </part>
-        <part Type="UD_CYBP Seraphorm Dactyl Hub" Laterality="Mid Outer" SupportsDependent="Mid UD_CYBP Seraphorm Dactylae">
-          <part Type="UD_CYBP Seraphorm Observation" Laterality="Mid Outer" />
+        <part Type="UD_CYBP Seraphorm Dactyl Hub" Laterality="Left Outer" SupportsDependent="Left UD_CYBP Seraphorm Dactylae">
+          <part Type="UD_CYBP Seraphorm Observation" Laterality="Left Outer" />
         </part>
-        <part Type="UD_CYBP Seraphorm Dactylae" Laterality="Mid" DependsOn="Mid UD_CYBP Seraphorm Dactylae" />
+        <part Type="UD_CYBP Seraphorm Dactylae" Laterality="Left" DependsOn="Left UD_CYBP Seraphorm Dactylae">
+          <part Type="UD_CYBP Seraphorm Command" Laterality="Left" />
+        </part>
       </part>
       
       <part Type="UD_CYBP Seraphorm Span" Laterality="Lower">
@@ -502,12 +507,11 @@
         <part Type="UD_CYBP Seraphorm Dactyl Hub" Laterality="Lower Outer" SupportsDependent="Lower UD_CYBP Seraphorm Dactylae">
           <part Type="UD_CYBP Seraphorm Observation" Laterality="Lower Outer" />
         </part>
-        <part Type="UD_CYBP Seraphorm Dactylae" Laterality="Lower" DependsOn="Lower UD_CYBP Seraphorm Dactylae" />
+        <part Type="UD_CYBP Seraphorm Dactylae" Laterality="Lower" DependsOn="Lower UD_CYBP Seraphorm Dactylae">
+          <part Type="UD_CYBP Seraphorm Command" Laterality="Lower" />
+        </part>
       </part>
       
-      <part Type="UD_CYBP Seraphorm Command" Laterality="Right" />
-      <part Type="UD_CYBP Seraphorm Command" Laterality="Left" />
-      <part Type="UD_CYBP Seraphorm Command" Laterality="Lower" />
       
     </anatomy>
     

@@ -10,46 +10,75 @@
   
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Stomatopod Pistol" Inherits="UD_CYBP_BaseBodyPlanEntry">
     <tag Name="Anatomy" Value="UD_CYBP Stomatopod Pistol" />
-    <tag Name="DisplayName" Value="Stomatopod (Pistol)" />
+    <tag Name="DisplayName" Value="Stomatopod ({{B|Pistol}})" />
     <tag Name="TextElements.StrangeBodies PistolClaws" />
-    <part Name="Render" Tile="Creatures/natural-weapon-pincer.bmp"
-        RenderString="L" TileColor="&amp;w" DetailColor="W" />
+    <part Name="Render" RenderString="L" ColorString="&amp;w"
+        Tile="Items/sw_fleshgun.bmp" TileColor="&amp;w" DetailColor="B" />
     <inventoryobject Blueprint="UD_CYBP Stomatopod Pistol Claw Pistol" Number="1" />
     <inventoryobject Blueprint="UD_CYBP Stomatopod Pistol Claw Pistol" Number="1" />
     <tag Name="LimbElements.UD_CYBP Stomatopod Pistol Claw" Value="Color::B;;PostText::{{c|&#x1A;}}6 {{r|&#x3;}}1d6" />
   </object>
-
   <object Name="StrangeBodies_UD_CYBP_TextElements PistolClaws" Inherits="UD_CYBP_BaseTextElements">
     <tag Name="TextElements" Value="StrangeBodies PistolClaws" />
-    <xtagUD_CYBP_Legend PistolClaw="{{B|Pistol Claw}} is a natural pistol." />
+    <xtagUD_CYBP_Legend PistolClaw="{{B|Pistol Claw}} is a slot-occupying natural pistol." />
   </object>
   
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Stomatopod Spear" Inherits="UD_CYBP_BaseBodyPlanEntry">
     <tag Name="Anatomy" Value="UD_CYBP Stomatopod Spear" />
-    <tag Name="DisplayName" Value="Stomatopod (Spear)" />
+    <tag Name="DisplayName" Value="Stomatopod ({{W|Spear}})" />
+    <tag Name="TextElements.StrangeBodies SpearClaws" />
     <part Name="Render" Tile="Items/sw_longblade_13.bmp"
         RenderString="L" TileColor="&amp;w" DetailColor="W" />
+    <inventoryobject Blueprint="UD_CYBP Stomatopod Spear Claw" Number="1" />
+    <inventoryobject Blueprint="UD_CYBP Stomatopod Spear Claw" Number="1" />
+    <tag Name="LimbElements.UD_CYBP Stomatopod Spear Claw"
+         Value="Color::W;;PostText::{{c|&#x1A;}}4{{K|/&#xEC;}} {{r|&#x3;}}2d3;;OverridesNaturalEquipmentColor::Yes;;OverridesNaturalEquipmentStats::Yes" />
+    <!--  -->
+  </object>
+  <object Name="StrangeBodies_UD_CYBP_TextElements SpearClaws" Inherits="UD_CYBP_BaseTextElements">
+    <tag Name="TextElements" Value="StrangeBodies SpearClaws" />
+    <xtagUD_CYBP_Legend PistolClaw="{{W|Spear Claw}} is a slot-occupying natural long blade." />
   </object>
   
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Stomatopod Smasher" Inherits="UD_CYBP_BaseBodyPlanEntry">
     <tag Name="Anatomy" Value="UD_CYBP Stomatopod Smasher" />
-    <tag Name="DisplayName" Value="Stomatopod (Smasher)" />
+    <tag Name="DisplayName" Value="Stomatopod ({{G|Smasher}})" />
+    <tag Name="TextElements.StrangeBodies SmasherClaws" />
     <part Name="Render" Tile="Creatures/natural-weapon-knob.bmp"
-        RenderString="L" TileColor="&amp;w" DetailColor="W" />
+        RenderString="L" TileColor="&amp;w" DetailColor="G" />
+    <inventoryobject Blueprint="UD_CYBP Stomatopod Smasher Claw" Number="1" />
+    <inventoryobject Blueprint="UD_CYBP Stomatopod Smasher Claw" Number="1" />
+    <tag Name="LimbElements.UD_CYBP Stomatopod Smasher Claw"
+         Value="Color::G;;PostText::{{c|&#x1A;}}4{{K|/&#xEC;}} {{r|&#x3;}}3d2;;OverridesNaturalEquipmentColor::Yes;;OverridesNaturalEquipmentStats::Yes" />
+    <!--  -->
+  </object>
+  <object Name="StrangeBodies_UD_CYBP_TextElements SmasherClaws" Inherits="UD_CYBP_BaseTextElements">
+    <tag Name="TextElements" Value="StrangeBodies SmasherClaws" />
+    <xtagUD_CYBP_Legend PistolClaw="{{G|Smasher Claw}} is a slot-occupying natural cudgel." />
   </object>
   
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Stomatopod Hatchet" Inherits="UD_CYBP_BaseBodyPlanEntry">
     <tag Name="Anatomy" Value="UD_CYBP Stomatopod Hatchet" />
-    <tag Name="DisplayName" Value="Stomatopod (Hatchet)" />
+    <tag Name="DisplayName" Value="Stomatopod ({{R|Hatchet}})" />
+    <tag Name="TextElements.StrangeBodies HatchetClaws" />
     <part Name="Render" Tile="Creatures/natural-weapon-shovel.bmp"
-        RenderString="L" TileColor="&amp;w" DetailColor="W" />
+        RenderString="L" TileColor="&amp;w" DetailColor="R" />
+    <inventoryobject Blueprint="UD_CYBP Stomatopod Hatchet Claw" Number="1" />
+    <inventoryobject Blueprint="UD_CYBP Stomatopod Hatchet Claw" Number="1" />
+    <tag Name="LimbElements.UD_CYBP Stomatopod Hatchet Claw"
+         Value="Color::R;;PostText::{{c|&#x1A;}}4{{K|/&#xEC;}} {{r|&#x3;}}1d3+2;;OverridesNaturalEquipmentColor::Yes;;OverridesNaturalEquipmentStats::Yes" />
+    <!--  -->
+  </object>
+  <object Name="StrangeBodies_UD_CYBP_TextElements HatchetClaws" Inherits="UD_CYBP_BaseTextElements">
+    <tag Name="TextElements" Value="StrangeBodies HatchetClaws" />
+    <xtagUD_CYBP_Legend PistolClaw="{{R|Hatchet Claw}} is a slot-occupying natural axe." />
   </object>
   
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Seraphorm" Inherits="UD_CYBP_BaseBodyPlanEntry">
     <tag Name="Anatomy" Value="UD_CYBP Seraphorm" />
     <tag Name="DisplayName" Value="Seraphorm" />
     <part Name="Render" Tile="Creatures/sw_galgal_1.bmp"
-        RenderString="S" TileColor="&amp;w" DetailColor="W" />
+        RenderString="O" ColorString="&amp;K^O" TileColor="&amp;K" DetailColor="O" />
   </object>
   
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Probiscimorph" Inherits="UD_CYBP_BaseBodyPlanEntry">
