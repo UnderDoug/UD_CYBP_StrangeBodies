@@ -26,14 +26,14 @@
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Stomatopod Spear" Inherits="UD_CYBP_BaseBodyPlanEntry">
     <tag Name="Anatomy" Value="UD_CYBP Stomatopod Spear" />
     <tag Name="DisplayName" Value="Stomatopod ({{W|Spear}})" />
-    <tag Name="TextElements.StrangeBodies SpearClaws" />
+    <!--tag Name="TextElements.StrangeBodies SpearClaws" /-->
     <part Name="Render" Tile="Items/sw_longblade_13.bmp"
         RenderString="L" TileColor="&amp;w" DetailColor="W" />
-    <inventoryobject Blueprint="UD_CYBP Stomatopod Spear Claw" Number="1" />
-    <inventoryobject Blueprint="UD_CYBP Stomatopod Spear Claw" Number="1" />
+    <!--inventoryobject Blueprint="UD_CYBP Stomatopod Spear Claw" Number="1" />
+    <inventoryobject Blueprint="UD_CYBP Stomatopod Spear Claw" Number="1" /-->
     <tag Name="LimbElements.UD_CYBP Stomatopod Spear Claw"
-         Value="Color::W;;PostText::{{c|&#x1A;}}4{{K|/&#xEC;}} {{r|&#x3;}}2d3;;OverridesNaturalEquipmentColor::Yes;;OverridesNaturalEquipmentStats::Yes" />
-    <!--  -->
+         Value="Color::W;;OverridesNaturalEquipmentColor::Yes" />
+    <!-- PostText::{{c|&#x1A;}}4{{K|/&#xEC;}} {{r|&#x3;}}2d3;;OverridesNaturalEquipmentStats::Yes;; -->
   </object>
   <object Name="StrangeBodies_UD_CYBP_TextElements SpearClaws" Inherits="UD_CYBP_BaseTextElements">
     <tag Name="TextElements" Value="StrangeBodies SpearClaws" />
@@ -43,14 +43,14 @@
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Stomatopod Smasher" Inherits="UD_CYBP_BaseBodyPlanEntry">
     <tag Name="Anatomy" Value="UD_CYBP Stomatopod Smasher" />
     <tag Name="DisplayName" Value="Stomatopod ({{G|Smasher}})" />
-    <tag Name="TextElements.StrangeBodies SmasherClaws" />
+    <!--tag Name="TextElements.StrangeBodies SmasherClaws" /-->
     <part Name="Render" Tile="Creatures/natural-weapon-knob.bmp"
         RenderString="L" TileColor="&amp;w" DetailColor="G" />
-    <inventoryobject Blueprint="UD_CYBP Stomatopod Smasher Claw" Number="1" />
-    <inventoryobject Blueprint="UD_CYBP Stomatopod Smasher Claw" Number="1" />
+    <!--inventoryobject Blueprint="UD_CYBP Stomatopod Smasher Claw" Number="1" />
+    <inventoryobject Blueprint="UD_CYBP Stomatopod Smasher Claw" Number="1" /-->
     <tag Name="LimbElements.UD_CYBP Stomatopod Smasher Claw"
-         Value="Color::G;;PostText::{{c|&#x1A;}}4{{K|/&#xEC;}} {{r|&#x3;}}3d2;;OverridesNaturalEquipmentColor::Yes;;OverridesNaturalEquipmentStats::Yes" />
-    <!--  -->
+         Value="Color::G;;OverridesNaturalEquipmentColor::Yes" />
+    <!-- PostText::{{c|&#x1A;}}4{{K|/&#xEC;}} {{r|&#x3;}}3d2;;OverridesNaturalEquipmentStats::Yes;; -->
   </object>
   <object Name="StrangeBodies_UD_CYBP_TextElements SmasherClaws" Inherits="UD_CYBP_BaseTextElements">
     <tag Name="TextElements" Value="StrangeBodies SmasherClaws" />
@@ -60,14 +60,14 @@
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Stomatopod Hatchet" Inherits="UD_CYBP_BaseBodyPlanEntry">
     <tag Name="Anatomy" Value="UD_CYBP Stomatopod Hatchet" />
     <tag Name="DisplayName" Value="Stomatopod ({{R|Hatchet}})" />
-    <tag Name="TextElements.StrangeBodies HatchetClaws" />
+    <!--tag Name="TextElements.StrangeBodies HatchetClaws" /-->
     <part Name="Render" Tile="Creatures/natural-weapon-shovel.bmp"
         RenderString="L" TileColor="&amp;w" DetailColor="R" />
-    <inventoryobject Blueprint="UD_CYBP Stomatopod Hatchet Claw" Number="1" />
-    <inventoryobject Blueprint="UD_CYBP Stomatopod Hatchet Claw" Number="1" />
+    <!--inventoryobject Blueprint="UD_CYBP Stomatopod Hatchet Claw" Number="1" />
+    <inventoryobject Blueprint="UD_CYBP Stomatopod Hatchet Claw" Number="1" /-->
     <tag Name="LimbElements.UD_CYBP Stomatopod Hatchet Claw"
-         Value="Color::R;;PostText::{{c|&#x1A;}}4{{K|/&#xEC;}} {{r|&#x3;}}1d3+2;;OverridesNaturalEquipmentColor::Yes;;OverridesNaturalEquipmentStats::Yes" />
-    <!--  -->
+         Value="Color::R;;OverridesNaturalEquipmentColor::Yes" />
+    <!-- PostText::{{c|&#x1A;}}4{{K|/&#xEC;}} {{r|&#x3;}}1d3+2;;OverridesNaturalEquipmentStats::Yes;; -->
   </object>
   <object Name="StrangeBodies_UD_CYBP_TextElements HatchetClaws" Inherits="UD_CYBP_BaseTextElements">
     <tag Name="TextElements" Value="StrangeBodies HatchetClaws" />

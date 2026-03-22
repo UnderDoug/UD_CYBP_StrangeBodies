@@ -112,10 +112,11 @@
     <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_saltHopperMandible_swing" />
     <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_longBlade_saltHopperMandible_blocked" />
     <tag Name="BaseObject" Value="*noinherit" />
-    <tag Name="NoDefaultBehavior" />
+    <!--tag Name="NoDefaultBehavior" /-->
     <tag Name="NoSparkingQuest" />
     <tag Name="ShowAsPhysicalFeature" />
     <tag Name="NeverStack" />
+    <!--tag Name="EquipInType" /-->
     <stag Name="Contemporary" />
   </object>
   <!-- Spear Variant-->
