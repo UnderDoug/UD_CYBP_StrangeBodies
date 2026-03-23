@@ -4,8 +4,17 @@
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Octopod" Inherits="UD_CYBP_BaseBodyPlanEntry">
     <tag Name="Anatomy" Value="UD_CYBP Octopod" />
     <tag Name="DisplayName" Value="Octopod" />
-    <part Name="Render" Tile="Creatures/natural-weapon-suckers.png"
+    <tag Name="TextElements.StrangeBodies_Trypophobia" />
+    <part Name="Render" Tile="Creatures/natural-weapon-pseudopod.bmp"
         RenderString="S" TileColor="&amp;w" DetailColor="W" />
+    <tag Name="LimbElements.UD_CYBP Suckers"
+         Value="Color::R;;OverridesNaturalEquipmentColor::Yes;;Symbol::StrangeBodies_Trypophobia" />
+  </object>
+  <object Name="StrangeBodies_UD_CYBP_TextElements Trypophobia" Inherits="UD_CYBP_BaseTextElements">
+    <tag Name="TextElements" Value="StrangeBodies_Trypophobia" />
+    <tag Name="DescriptionBefore" Value="This body plan contains tiles which {{R|may trigger trypophobia}}.\r\nThere is an option to swap these tiles for something else." />
+    <xtagUD_CYBP_Symbols StrangeBodies_Trypophobia="R::&#x13;" />
+    <xtagUD_CYBP_Legend StrangeBodies_Trypophobia="May trigger {{R|trypophobia}}" />
   </object>
   
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Stomatopod Pistol" Inherits="UD_CYBP_BaseBodyPlanEntry">
@@ -76,16 +85,30 @@
     <tag Name="WantsDerivedFrom" />
   </object>
   
-  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Probiscimorph" Inherits="UD_CYBP_BaseBodyPlanEntry">
-    <tag Name="Anatomy" Value="UD_CYBP Probiscimorph" />
-    <tag Name="DisplayName" Value="Probiscimorph" />
+  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Humanoid Probiscimorph" Inherits="UD_CYBP_BaseBodyPlanEntry">
+    <tag Name="Anatomy" Value="UD_CYBP Humanoid Probiscimorph" />
+    <tag Name="DisplayName" Value="Probiscimorph (Humanoid)" />
     <part Name="Render" Tile="Creatures/natural-weapon-pseudopod.bmp"
         RenderString="S" TileColor="&amp;w" DetailColor="W" />
   </object>
   
-  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Tailed Probiscimorph" Inherits="UD_CYBP_BaseBodyPlanEntry">
-    <tag Name="Anatomy" Value="UD_CYBP Tailed Probiscimorph" />
-    <tag Name="DisplayName" Value="Probiscimorph (Tailed)" />
+  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Tailed Humanoid Probiscimorph" Inherits="UD_CYBP_BaseBodyPlanEntry">
+    <tag Name="Anatomy" Value="UD_CYBP Tailed Humanoid Probiscimorph" />
+    <tag Name="DisplayName" Value="Probiscimorph (Humanoid, Tailed)" />
+    <part Name="Render" Tile="Creatures/natural-weapon-pseudopod.bmp"
+        RenderString="S" TileColor="&amp;w" DetailColor="W" />
+  </object>
+  
+  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Quadruped Probiscimorph" Inherits="UD_CYBP_BaseBodyPlanEntry">
+    <tag Name="Anatomy" Value="UD_CYBP Quadruped Probiscimorph" />
+    <tag Name="DisplayName" Value="Probiscimorph (Quadruped)" />
+    <part Name="Render" Tile="Creatures/natural-weapon-pseudopod.bmp"
+        RenderString="S" TileColor="&amp;w" DetailColor="W" />
+  </object>
+  
+  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Tailed Quadruped Probiscimorph" Inherits="UD_CYBP_BaseBodyPlanEntry">
+    <tag Name="Anatomy" Value="UD_CYBP Tailed Quadruped Probiscimorph" />
+    <tag Name="DisplayName" Value="Probiscimorph (Quadruped, Tailed)" />
     <part Name="Render" Tile="Creatures/natural-weapon-pseudopod.bmp"
         RenderString="S" TileColor="&amp;w" DetailColor="W" />
   </object>
@@ -104,16 +127,30 @@
         RenderString="G" TileColor="&amp;w" DetailColor="W" />
   </object>
   
-  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry UD_CYBP Girafform" Inherits="UD_CYBP_BaseBodyPlanEntry">
-    <tag Name="Anatomy" Value="UD_CYBP Girafform" />
-    <tag Name="DisplayName" Value="Girafform" />
+  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry UD_CYBP Humanoid Girafform" Inherits="UD_CYBP_BaseBodyPlanEntry">
+    <tag Name="Anatomy" Value="UD_CYBP Humanoid Girafform" />
+    <tag Name="DisplayName" Value="Girafform (Humanoid)" />
     <part Name="Render" Tile="creatures/sw_equimax.bmp"
         RenderString="G" TileColor="&amp;w" DetailColor="W" />
   </object>
   
-  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Tailed UD_CYBP Girafform" Inherits="UD_CYBP_BaseBodyPlanEntry">
-    <tag Name="Anatomy" Value="UD_CYBP Tailed Girafform" />
-    <tag Name="DisplayName" Value="Girafform (Tailed)" />
+  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry UD_CYBP Tailed Humanoid Girafform" Inherits="UD_CYBP_BaseBodyPlanEntry">
+    <tag Name="Anatomy" Value="UD_CYBP Tailed Humanoid Girafform" />
+    <tag Name="DisplayName" Value="Girafform (Humanoid, Tailed)" />
+    <part Name="Render" Tile="creatures/sw_equimax.bmp"
+        RenderString="G" TileColor="&amp;w" DetailColor="W" />
+  </object>
+  
+  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry UD_CYBP Quadruped Girafform" Inherits="UD_CYBP_BaseBodyPlanEntry">
+    <tag Name="Anatomy" Value="UD_CYBP Quadruped Girafform" />
+    <tag Name="DisplayName" Value="Girafform (Quadruped)" />
+    <part Name="Render" Tile="creatures/sw_equimax.bmp"
+        RenderString="G" TileColor="&amp;w" DetailColor="W" />
+  </object>
+  
+  <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry UD_CYBP Tailed Quadruped Girafform" Inherits="UD_CYBP_BaseBodyPlanEntry">
+    <tag Name="Anatomy" Value="UD_CYBP Tailed Quadruped Girafform" />
+    <tag Name="DisplayName" Value="Girafform (Quadruped, Tailed)" />
     <part Name="Render" Tile="creatures/sw_equimax.bmp"
         RenderString="G" TileColor="&amp;w" DetailColor="W" />
   </object>

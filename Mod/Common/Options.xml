@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<options>
+  <option ID="UD_CYBP_StrangeBodies_EnableNoTrypo"
+          DisplayText="Enable {{O|trypophobia}}-friendly tiles."
+          Category="Mod: CYBP Strange Bodies"
+          Type="Checkbox"
+          Default="No"
+          Restart="true" >
+    <helptext>
+      Some of the tiles added and used by this mod can trigger {{O|trypophobia}}.
+
+      Enabling this option will swap them out with alternatives designed to not do that.
+
+      The default is {{w|Disabled}}.
+    </helptext>
+  </option>
+</options>  

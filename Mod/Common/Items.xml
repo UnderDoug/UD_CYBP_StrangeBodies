@@ -159,7 +159,7 @@
   <object Name="UD_CYBP Seraphorm Dactyla" Inherits="NaturalWeapon">
     <part Name="Render" DisplayName="dactyla"
           ColorString="&amp;K^O" RenderString="O"
-          Tile="Creatures/natural-weapon-fist.bmp"
+          Tile="Creatures/natural-weapon-dactyla.png"
           TileColor="&amp;K" DetailColor="O" />
     <part Name="MeleeWeapon"
           MaxStrengthBonus="999"
@@ -177,7 +177,7 @@
   <object Name="UD_CYBP Prehensile Nostrils" Inherits="SoftManipulator">
     <part Name="Render" DisplayName="prehensile nostrils"
           ColorString="&amp;w" RenderString="B"
-          Tile="Creatures/natural-weapon-manipulator.bmp"
+          Tile="Creatures/natural-weapon-prehensile-nostrils.png"
           TileColor="&amp;w" DetailColor="W" />
     <tag Name="NeverStack" />
   </object>
@@ -190,14 +190,14 @@
   <object Name="UD_CYBP Prehensile Foot" Inherits="DefaultFist">
     <part Name="Render" DisplayName="foot fist"
           ColorString="&amp;w" RenderString="B"
-          Tile="Creatures/natural-weapon-manipulator.bmp"
+          Tile="Creatures/natural-weapon-foost.png"
           TileColor="&amp;w" DetailColor="W" />
     <tag Name="NeverStack" />
   </object>
   <object Name="UD_CYBP Prehensile Tail" Inherits="SoftManipulator">
     <part Name="Render" DisplayName="prehensile tail"
           ColorString="&amp;w" RenderString="S"
-          Tile="Creatures/natural-weapon-manipulator.bmp"
+          Tile="Creatures/natural-weapon-prehensile-tail.png"
           TileColor="&amp;w" DetailColor="W" />
     <tag Name="NeverStack" />
   </object>
@@ -210,7 +210,7 @@
   <object Name="UD_CYBP Prehensile Tongue" Inherits="SoftManipulator">
     <part Name="Render" DisplayName="prehensile tongue"
           ColorString="&amp;w" RenderString="S"
-          Tile="Creatures/natural-weapon-manipulator.bmp"
+          Tile="Creatures/natural-weapon-prehensile-tongue.png"
           TileColor="&amp;w" DetailColor="W" />
     <tag Name="NeverStack" />
   </object>

@@ -116,6 +116,7 @@
     
     <bodyparttypevariant VariantOf="Thrown Weapon" Type="UD_CYBP Seraphorm Clutch"
                          DescriptionPrefix="Within" Name="clutch" Description="Clutch"
+                         Abstract="false" UsuallyOnVariant="UD_CYBP Seraphorm Centre"
                          Category="Extradimensional" />
     
     <bodyparttypevariant VariantOf="Arm" Type="UD_CYBP Seraphorm Span"
@@ -192,6 +193,7 @@
     -->
     <bodyparttypevariant VariantOf="Arm" Type="UD_CYBP Neck"
                          DescriptionPrefix="Worn around" Name="neck" Description="Neck"
+                         Branching="Lateral,Longitudinal,Vertical,Stratal"
                          Category="Animal" />
 
     <bodyparttypevariant VariantOf="Hand" Type="UD_CYBP Prehensile Tongue"
@@ -491,7 +493,7 @@
     Probiscimorph (elephant)
     
     -->
-    <anatomy Name="UD_CYBP Probiscimorph" Category="Animal">
+    <anatomy Name="UD_CYBP Humanoid Probiscimorph" Category="Animal">
       
       <part Type="Head">
         <part Type="Face">
@@ -500,6 +502,7 @@
           </part>
         </part>
       </part>
+      
       <part Type="Back" />
       
       <part Type="Arm" Laterality="Right">
@@ -517,7 +520,7 @@
       
     </anatomy>
     
-    <anatomy Name="UD_CYBP Tailed Probiscimorph" Category="Animal">
+    <anatomy Name="UD_CYBP Tailed Humanoid Probiscimorph" Category="Animal">
       
       <part Type="Head">
         <part Type="Face">
@@ -541,6 +544,54 @@
       <part Type="Missile Weapon" Laterality="Left" />
       
       <part Type="Feet" />
+
+      <part Type="Tail" />
+      
+    </anatomy>
+    
+    <anatomy Name="UD_CYBP Quadruped Probiscimorph" Category="Animal">
+      
+      <part Type="Head">
+        <part Type="Face">
+          <part Type="UD_CYBP Trunk">
+            <part Type="UD_CYBP Prehensile Nostrils"/>
+          </part>
+        </part>
+      </part>
+
+      <part Type="Back" />
+
+      <part Type="Leg" Laterality="Right Fore" SupportsDependent="Fore Feet"/>
+      <part Type="Leg" Laterality="Left Fore" SupportsDependent="Fore Feet" />
+      <part Type="Feet" Laterality="Fore" DependsOn="Fore Feet" />
+
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+
+      <part Type="Feet" Laterality="Hind" />
+      
+    </anatomy>
+    
+    <anatomy Name="UD_CYBP Tailed Quadruped Probiscimorph" Category="Animal">
+      
+      <part Type="Head">
+        <part Type="Face">
+          <part Type="UD_CYBP Trunk">
+            <part Type="UD_CYBP Prehensile Nostrils"/>
+          </part>
+        </part>
+      </part>
+      
+      <part Type="Back" />
+      
+      <part Type="Leg" Laterality="Right Fore" SupportsDependent="Fore Feet"/>
+      <part Type="Leg" Laterality="Left Fore" SupportsDependent="Fore Feet" />
+      <part Type="Feet" Laterality="Fore" DependsOn="Fore Feet" />
+      
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+      
+      <part Type="Feet" Laterality="Hind" />
 
       <part Type="Tail" />
       
@@ -618,17 +669,7 @@
     Girafform (Giraffe)
     
     -->
-    <anatomy Name="UD_CYBP Girafform" Category="Animal">
-      
-      <part Type="UD_CYBP Neck">
-        <part Type="Head">
-          <part Type="Face">
-            <part Type="UD_CYBP Prehensile Tongue" />
-          </part>
-        </part>
-      </part>
-      
-      <part Type="Back" />
+    <anatomy Name="UD_CYBP Humanoid Girafform" Category="Animal">
       
       <part Type="Arm" Laterality="Right">
         <part Type="Hand" Laterality="Right" SupportsDependent="Hands" />
@@ -637,25 +678,26 @@
         <part Type="Hand" Laterality="Left" SupportsDependent="Hands" />
       </part>
       <part Type="Hands" DependsOn="Hands" />
+      
+      <part Type="Back" />
+      
+      <part Type="UD_CYBP Neck">
+        <part Type="Head">
+          <part Type="Face">
+            <part Type="UD_CYBP Prehensile Tongue" />
+          </part>
+        </part>
+      </part>
       
       <part Type="Missile Weapon" Laterality="Right" />
       <part Type="Missile Weapon" Laterality="Left" />
       
       <part Type="Feet" />
+      
     </anatomy>
     
-    <anatomy Name="UD_CYBP Tailed Girafform" Category="Animal">
-      
-      <part Type="UD_CYBP Neck">
-        <part Type="Head">
-          <part Type="Face">
-            <part Type="UD_CYBP Prehensile Tongue" />
-          </part>
-        </part>
-      </part>
-      
-      <part Type="Back" />
-      
+    <anatomy Name="UD_CYBP Tailed Humanoid Girafform" Category="Animal">
+
       <part Type="Arm" Laterality="Right">
         <part Type="Hand" Laterality="Right" SupportsDependent="Hands" />
       </part>
@@ -663,15 +705,74 @@
         <part Type="Hand" Laterality="Left" SupportsDependent="Hands" />
       </part>
       <part Type="Hands" DependsOn="Hands" />
-      
+
+      <part Type="Back" />
+
+      <part Type="UD_CYBP Neck">
+        <part Type="Head">
+          <part Type="Face">
+            <part Type="UD_CYBP Prehensile Tongue" />
+          </part>
+        </part>
+      </part>
+
       <part Type="Missile Weapon" Laterality="Right" />
       <part Type="Missile Weapon" Laterality="Left" />
-      
+
       <part Type="Feet" />
 
       <part Type="Tail" />
       
     </anatomy>
+    
+    <anatomy Name="UD_CYBP Quadruped Girafform" Category="Animal">
+
+      <part Type="Leg" Laterality="Right Fore" SupportsDependent="Fore Feet"/>
+      <part Type="Leg" Laterality="Left Fore" SupportsDependent="Fore Feet" />
+      <part Type="Feet" Laterality="Fore" DependsOn="Fore Feet" />
+
+      <part Type="Back" />
+      
+      <part Type="UD_CYBP Neck">
+        <part Type="Head">
+          <part Type="Face">
+            <part Type="UD_CYBP Prehensile Tongue" />
+          </part>
+        </part>
+      </part>
+
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+
+      <part Type="Feet" Laterality="Hind" />
+      
+    </anatomy>
+    
+    <anatomy Name="UD_CYBP Tailed Quadruped Girafform" Category="Animal">
+
+      <part Type="Leg" Laterality="Right Fore" SupportsDependent="Fore Feet"/>
+      <part Type="Leg" Laterality="Left Fore" SupportsDependent="Fore Feet" />
+      <part Type="Feet" Laterality="Fore" DependsOn="Fore Feet" />
+
+      <part Type="Back" />
+
+      <part Type="UD_CYBP Neck">
+        <part Type="Head">
+          <part Type="Face">
+            <part Type="UD_CYBP Prehensile Tongue" />
+          </part>
+        </part>
+      </part>
+
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+
+      <part Type="Feet" Laterality="Hind" />
+
+      <part Type="Tail" />
+      
+    </anatomy>
+    
   </anatomies>
 
 </bodies>
