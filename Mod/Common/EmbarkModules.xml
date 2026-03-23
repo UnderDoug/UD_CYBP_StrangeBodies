@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<embarkmodules>
+  <module Class="XRL.CharacterBuilds.Qud.QudPregenModule">
+    <pregens>
+      <!-- Foreground is black pixels, Detail is white pixels -->
+      <pregen Name="Octonaut" Genotype="Mutated Human" Tile="BodyPlans/octopod.png" Foreground="y" Detail="B" Background="k">
+        <code>H4sIAAAAAAAACtVWW2/aMBR+r9T/YEV72KQQAe26rRIPQKfu0moMGFs1VZOJz4I3x0596RQh/vvshEsCZbCVIQFCwec7l++cY594fHyEkBfhGO5BKiq4d468elAN6rVacHLm+Rk+NJSRgkLNKtSmWCyIYaCs+KtbIzTOH3OonybgjL50r4L2CEscapAt51EFHw1xv0vgQlu168zAR02lIB6ytNLuWYPER4M8dmPBzEdtw7SR0OBgtMTMRx0zZDR8D2lf/ATe4IaxnGNGRsKdoRKIjWHZOHCBEayxFc6ZW9ET/be0L6yTFeoLAtbnTN+5vTYaayDojYkxL2kNynWuejNskv+Z+P9c554ZHmCZS6w3V3mq7pw2ZSg4Nnpf9c2aan2rA6vwEu/NNY4T67FalChgEGY+FpMg/4yLCzTd+dMGdCECDjJf+0uKAywp5no5ySnaFibDakX5xN82co/RGNAlw5yo/UbuS5owqPwQlNsBsN/YbcFIpcWEIHuPzDCV9yLFPIR958y/G7WrDbZY3K4dKvWdDpWm1pIOjYZDmyrLxDePlY47E6pjZDjCCkg5phvtWgKP9MgCz0vt8poRZVSnFnhVBvrCRCMOyo2lF2XorT1/jFE7gUKXyssy+pkylohfIC10VoZeR8LpL2TFzejhpJdAtnMqp6dloAsxppzyaHl6Dm26TTdTyxb/8VXVHgmhoKex1JbPlQiz83JgO+xPSWxxUViyc8HeiSTBO70ufLr4ltO8EUa2BEk79p0TWI4PJTXDZ3142JjY0s07Ug2y7yPb4eVhkIuDXCDkIqGnTY61iNPzjMlNq4M+hFokgjzztmveI7LPG7i2AuVWzm4fKyNjmsCMSyEFb835LTTcVfZkpeHucXt8NPkN//RXizwNAAA=</code>
+        <description>
+&amp;c&#249;&amp;y High agility and utility
+&amp;c&#249;&amp;y Slippery and hard to pin down
+&amp;c&#249;&amp;y Little in the way of offensive kit
+&amp;c&#249;&amp;y {{W|Challenging}} starting build
+        </description>
+      </pregen>
+    </pregens>
+  </module>
+</embarkmodules>

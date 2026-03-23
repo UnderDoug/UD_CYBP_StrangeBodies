@@ -5,7 +5,7 @@
     <tag Name="Anatomy" Value="UD_CYBP Octopod" />
     <tag Name="DisplayName" Value="Octopod" />
     <tag Name="TextElements.StrangeBodies_Trypophobia" />
-    <part Name="Render" Tile="Creatures/natural-weapon-pseudopod.bmp"
+    <part Name="Render" Tile="BodyPlans/octopod.png"
         RenderString="S" TileColor="&amp;w" DetailColor="W" />
     <tag Name="LimbElements.UD_CYBP Suckers"
          Value="Color::R;;OverridesNaturalEquipmentColor::Yes;;Symbol::StrangeBodies_Trypophobia" />
@@ -116,14 +116,14 @@
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Anthropoid" Inherits="UD_CYBP_BaseBodyPlanEntry">
     <tag Name="Anatomy" Value="UD_CYBP Anthropoid" />
     <tag Name="DisplayName" Value="Anthropoid" />
-    <part Name="Render" Tile="creatures/sw_cyclops.bmp"
+    <part Name="Render" Tile="BodyPlans/anthropoid.png"
         RenderString="G" TileColor="&amp;w" DetailColor="W" />
   </object>
   
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Tailed Anthropoid" Inherits="UD_CYBP_BaseBodyPlanEntry">
     <tag Name="Anatomy" Value="UD_CYBP Tailed Anthropoid" />
     <tag Name="DisplayName" Value="Anthropoid (Tailed)" />
-    <part Name="Render" Tile="creatures/sw_cyclops.bmp"
+    <part Name="Render" Tile="BodyPlans/anthropoid_tailed.png"
         RenderString="G" TileColor="&amp;w" DetailColor="W" />
   </object>
   
