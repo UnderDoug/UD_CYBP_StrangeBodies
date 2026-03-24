@@ -8,7 +8,7 @@
     <part Name="Render" Tile="BodyPlans/octopod.png"
         RenderString="S" TileColor="&amp;w" DetailColor="W" />
     <tag Name="LimbElements.UD_CYBP Suckers"
-         Value="Color::R;;OverridesNaturalEquipmentColor::Yes;;Symbol::StrangeBodies_Trypophobia" />
+         Value="Option.SimpleOptionDelegate::UD_CYBP_StrangeBodies_EnableNoTrypo==No;;Color::R;;OverridesNaturalEquipmentColor::Yes;;Symbol::StrangeBodies_Trypophobia" />
   </object>
   <object Name="StrangeBodies_UD_CYBP_TextElements Trypophobia" Inherits="UD_CYBP_BaseTextElements">
     <tag Name="TextElements" Value="StrangeBodies_Trypophobia" />
