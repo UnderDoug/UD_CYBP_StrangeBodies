@@ -15,6 +15,7 @@
     <tag Name="DescriptionBefore" Value="This body plan contains tiles which {{R|may trigger trypophobia}}.\r\nThere is an option to swap these tiles for something else." />
     <xtagUD_CYBP_Symbols StrangeBodies_Trypophobia="R::&#x13;" />
     <xtagUD_CYBP_Legend StrangeBodies_Trypophobia="May trigger {{R|trypophobia}}" />
+    <tag Name="Option" Value="UD_CYBP_StrangeBodies_EnableNoTrypo==No" />
   </object>
   
   <object Name="StrangeBodies_UD_CYBP_BodyPlanEntry Stomatopod Pistol" Inherits="UD_CYBP_BaseBodyPlanEntry">
